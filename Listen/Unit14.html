@@ -1,0 +1,434 @@
+<!DOCTYPE html><html><head>
+      <title>Unit14</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-14-1032031164">Unit 14 1032031164</h1>
+
+<h2 class="mume-header" id="part-1-w3fibsyr">Part 1 w3fibsyr</h2>
+
+<h3 class="mume-header" id="question-1000910437">Question 1000910437</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><p>W: Hello Son! How are you and your wife? When&#x2019;s the baby due?</p><p>M: uh Hi mom &#x2026; We&#x2019;re doing well &#x2026; Kelly is having the baby any minute now! I&#x2019;ve finished painting the baby&#x2019;s room, but I haven&#x2019;t finished the baseball decorations. The baseball decorations have to be perfect for the baby&#x2019;s room you know &#x2026;</p><p>W: Son? Baseball? This baby isn&#x2019;t born yet. How do you know the baby will like baseball?</p><p>M: When Kelly and I talked about the new baby&#x2019;s room, I told her the one thing it had to have is a baseball theme. Baseball. Baseball, mom. Just like dad and me.</p><p>W: Son, your father loved you so much. Going to baseball games with you was important for him to show how much he loved you. He worried that he worked too much and didn&#x2019;t spend enough time with you. But he always made time to take you to baseball games.</p><p>M: Dad was the best dad. He worked so hard at the company for so many years to make sure he took good care of us. I always remember the Saturdays he took me to the ball park. We would get up early, and he would make me a nice breakfast before we left for the game. Oh mom. I miss dad so much.</p><p>W: I know, son, I miss him so much, too. All the time, every day.</p><p>M: I just kept thinking that if I put up the baseball decorations in the baby&#x2019;s room before the baby is born, it would be like dad is here to welcome the baby home even though he&#x2019;s not alive to be here in person.</p><p>W: Well, we have his memory, his great love of all his family and baseball! I can&#x2019;t wait to see the room. Did you paint it blue?</p><p>M: I did! A blue room full of the love of baseball!</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/0ccc5fb6-5322-4cd7-8c06-95136fb401f3.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910437.mp3<p></p>
+<p>Question&#xFF1A;What has the man finished doing so far?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/2e2c3ebc-c728-4db4-803a-f838ecca6437.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910437.mp3<br>
+A : Putting up the baseball decorations.<br>
+B : Preparing the baseball equipment.<br>
+<em><strong>C : Painting the baby&#x2019;s room.</strong></em><br>
+D : Bringing the baby home.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;Why did the man choose the baseball theme to decorate his baby&#x2019;s room?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/d0ec41a6-3758-4e86-96da-cadc58433566.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910437.mp3<br>
+A : It is a tradition of his family.<br>
+<em><strong>B : It is the best way to honor his father.</strong></em><br>
+C : He is a great baseball player himself.<br>
+D : He knows his baby will like baseball.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;Why does the man regard his dad as the best dad?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/cc26d92d-a28c-400c-8a79-9957259f5289.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910437.mp3<br>
+A : His dad gave up his work to take care of him.<br>
+B : His dad took him to the ball park every day.<br>
+C : His dad made him nice breakfast before going to work.<br>
+<em><strong>D : His dad managed to take him to baseball games.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What can we infer about the man&#x2019;s dad from the recording?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/6c67b728-840f-4ae2-b5fc-7fae2d62dff9.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910437.mp3<br>
+<em><strong>A : His love of the family was deeply cherished by them.</strong></em><br>
+B : He was too busy to be at home even on Saturdays.<br>
+C : His hard work at the company was greatly admired.<br>
+D : Playing baseball was his favorite hobby for life.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<h3 class="mume-header" id="question-1000910361">Question 1000910361</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><p style="text-align:justify">W: &#xA0;Cody! Sit up straight. You can do this.</p><p style="text-align:justify">M: &#xA0;Aunt Peggy, I appreciate your efforts to help. I&#x2019;m really nervous. I think I should just stick with the job I have.</p><p style="text-align:justify">W: What? Cody! Listen! You have amazing talent. All you need is a good, strong interview to win this job. I&#x2019;m a professional coach who also happens to be your Aunt Peggy. Do you know how much I get paid to coach people to prepare them for job interviews?</p><p style="text-align:justify">M: Uhhh, no, Aunt Peggy, I don&#x2019;t.</p><p style="text-align:justify">W: Well, I get paid $200 an hour to coach people before their job interviews. I&#x2019;m doing this to help you &#x2013; because I love you. Now, let&#x2019;s start again. Tell me: What are the five main points for communicating confidence in a job interview?</p><p style="text-align:justify">M: 1) Firm hand shake, 2) strong eye contact, 3) don&#x2019;t cross your arms or legs, and 4) sit up straight in the chair and, of course&#x2026;5) speak from the heart.</p><p style="text-align:justify">W: Good. Now, Cody. Tell me why you want this job, why they should hire you.</p><p style="text-align:justify">M: Ummmmm &#x2026; Alright. Ummmm. Ummmm &#x2026; Ummmmm &#x2026;</p><p style="text-align:justify">W: Cody. Sit up. Sit straight. Deep breath. Now, speak from your heart.</p><p style="text-align:justify">M: I believe in the vision of your organization as a way of raising funds for creative projects because of the art matter. The art is the heart beat of our culture and I love the way your organization helps artists raise funds to make their ideas a reality. I have the skills you need, and I am ready to work really hard to do a great job.</p><p style="text-align:justify">W: Excellent! Cody, that was excellent! Strong eye contact, you sat straight in the chair. And, most of all, you spoke with great heart about the arts, and why you want this job.</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/2befcbc0-26a1-4e9e-b07a-5e34bdfc3452.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910361.mp3<p></p>
+<p>Question&#xFF1A;What job does the woman do?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/3023a7af-8833-4575-8ab7-b8773a488be7.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910361.mp3<br>
+A : Giving people job interviews.<br>
+<em><strong>B : Preparing people for job interviews.</strong></em><br>
+C : Evaluating people&#x2019;s job performance.<br>
+D : Giving people training in job skills.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What does the woman want the man to improve?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/12e8597c-3cb0-4886-8f71-bca6a5ae45b0.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910361.mp3<br>
+A : His physical appearance.<br>
+B : His attitude toward the interview.<br>
+C : His professional skills.<br>
+<em><strong>D : His confidence in the interview.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;Why does the man think he is qualified for the job he is applying for?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/6c257fa3-0fd2-41b1-a2db-39cb835e5390.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910361.mp3<br>
+A : He knows the way the company is organized.<br>
+B : He has a clear vision of his art talent.<br>
+<em><strong>C : He has the skills the job requires.</strong></em><br>
+D : He has raised funds for creative artists.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What can we learn about the man?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/8306702d-ab86-4b21-a311-1af879c2c44d.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000910361.mp3<br>
+<em><strong>A : He is currently doing a job somewhere.</strong></em><br>
+B : He&#x2019;s never had a job interview before.<br>
+C : He has made his art ideas a reality.<br>
+D : He has just graduated from college.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<h2 class="mume-header" id="part-2-6uv45paz">Part 2 6uv45paz</h2>
+
+<h3 class="mume-header" id="question-1000863894">Question 1000863894</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">&#xA0;&#xA0;&#xA0; The favorite food in the United States is the hamburger, a kind of round sandwich of cooked ground beef. The favorite place to buy a hamburger is a fast food restaurant. At fast food restaurants, people order their food, wait a few minutes, and carry it to their tables themselves. People also take their food out of the restaurant and eat it in their cars or in their homes. At some fast food restaurants, people can order their food, pay for it and pick it up without leaving their cars.<br><br>
+<br><br>
+&#xA0;&#xA0;&#xA0; There are many kinds of fast food restaurants in the United States. The most numerous sell hamburgers, French fries and milkshakes, which are traditionally popular foods among Americans. In addition, fast food restaurants that serve Chinese food, Mexican food, Italian food, chicken, seafood and ice cream are very numerous.<br><br>
+<br><br>
+&#xA0;&#xA0; &#xA0;The idea of a fast food restaurant is so popular that nearly every kind of food can be found in one. Fast food restaurants are popular because they reflect American lifestyle.<br><br>
+<br><br>
+&#xA0;&#xA0; &#xA0;First, they are not formal restaurants. Customers wear any type of dress when they go to a fast food place.<br><br>
+<br><br>
+&#xA0;&#xA0;&#xA0; Second, they are fast. People who are busy do not want to spend time preparing their own food or waiting while someone else prepares it. In fast food restaurants the food is usually ready before the customer even orders it.<br><br>
+<br><br>
+&#xA0;&#xA0; &#xA0;Finally, most food in a fast food restaurant is not expensive. Therefore, people can afford to eat at a fast food restaurant often, while they may not be able to afford a more traditional and more expensive restaurant very often.<br><br>
+&#xA0;</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141009132050854.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000863894.mp3<p></p>
+<p>Question&#xFF1A;What is mainly talked about in the passage?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141009132105289.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000863894.mp3<br>
+A : Countries that provide fast food.<br>
+<em><strong>B : The popularity of fast food in the United States.</strong></em><br>
+C : Fast food restaurants in the United States.<br>
+D : The kinds of fast food in the United States.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x9996;&#x53E5;&#x5217;&#x4E3E;&#x4E86;&#x591A;&#x79CD;&#x5FEB;&#x9910;&#x540D;&#x79F0;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x56F4;&#x7ED5;&#x8D2D;&#x4E70;&#x5FEB;&#x9910;&#x7684;&#x5730;&#x70B9;&#x3001;&#x5FEB;&#x9910;&#x7684;&#x79CD;&#x7C7B;&#x53CA;&#x9009;&#x62E9;&#x5FEB;&#x9910;&#x7684;&#x539F;&#x56E0;&#x5C55;&#x5F00;&#x4ECB;&#x7ECD;&#xFF0C;&#x53EF;&#x89C1;&#x4E2D;&#x5FC3;&#x8BDD;&#x9898;&#x662F;&#x5FEB;&#x9910;&#x3002;&#x6240;&#x4EE5;&#x9009;B&#xFF0C;&#x5373;&#x5FEB;&#x9910;&#x5728;&#x7F8E;&#x56FD;&#x7684;&#x666E;&#x53CA;&#x3002;</p>
+<p>Question&#xFF1A;What is NOT mentioned as fast food served in restaurants?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141009132221684.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000863894.mp3<br>
+<em><strong>A : Japanese food.</strong></em><br>
+B : Chinese food.<br>
+C : Italian food.<br>
+D : Mexican food.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x628A;&#x63E1;&#x5217;&#x4E3E;&#x7684;&#x4E0D;&#x540C;&#x56FD;&#x5BB6;&#x540D;&#x79F0;&#xFF0C;&#x97F3;&#x9891;&#x6CA1;&#x6709;&#x63D0;&#x53CA;&#x65E5;&#x9910;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;Why are fast food restaurants widely welcomed in the USA?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141009132329564.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/1000863894.mp3<br>
+A : Because people can take and eat their food in their cars or in their homes.<br>
+B : Because fast food restaurants provide fast service and cheap food.<br>
+C : Because customers wear any type of dress when they go to a fast food place.<br>
+<em><strong>D : Because it&apos;s a reflection of American way of living.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x542C;&#x5230;Fast food restaurants are popular because they reflect American life style&#x4E00;&#x53E5;&#xFF0C;&#x7B54;&#x6848;&#x7531;they reflect American life style&#x5F97;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;&#x7531;&#x4E0B;&#x6587;&#x7684;first, second &#x53CA;finally &#x53EF;&#x77E5;&#xFF0C;&#x6240;&#x8BB2;&#x7684;&#x4E09;&#x6761;&#x90FD;&#x53EA;&#x662F;&#x539F;&#x56E0;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<h3 class="mume-header" id="question-10124622">Question 10124622</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">As one of NASA&#x2019;s researchers and engineers, I believed that we have identified a planet 1,400 light years away which closely resembles Earth. The planet, named Kepler-452b after the Kepler telescope that detected it, is about 60% larger in diameter than Earth and is located in the constellation Cygnus, the swan&#xA0;zodiac sign.<br><br>
+&#xA0;<br><br>
+We found that Kepler-452b fires the planet hunter&#x2019;s imagination because it is the most similar to the Earth-sun system found yet: a planet at the right temperature within a habitable zone, and only about one and a half times the diameter of Earth, circling a star very much like our own sun.<br><br>
+&#xA0;<br><br>
+A delicate balance allows Earth to support life. As we orbit the huge star we call the sun, the earth rotates at a distance just close enough to maintain liquid water and comfortable temperatures. Such a sweet spot in a solar system, called a &#x201C;habitable zone,&#x201D; or &#x201C;goldilocks&#xA0;zone,&#x201D; is the most likely place to find life beyond our planet. Until yesterday, at least a dozen planets had been located in habitable zones throughout the universe. But none had the winning combination of features that makes Kepler-452b so similar to Earth.<br><br>
+&#xA0;<br><br>
+It&#x2019;s these favorable characteristics that would make life on Kepler-452b possible. However, if there were life on Kepler-452b, it would be quite different from life on Earth. Because it is thicker than Earth, everything would weigh much more there, there are a lot of unknowns about how life would evolve on another planet. But the same physics that work on Earth would work elsewhere, so it&#x2019;s possible that life would follow a similar development. Nature can find common solutions to common problems.<br><br>
+&#xA0;<br><br>
+So what&#x2019;s next? Well, Kepler-452b is too far away for humans to visit. But the discovery of this new Earth-like planet can tell us a lot about what&#x2019;s possible for the future of space travel. NASA&#x2019;s scientists said, the next step in the process is to do follow-up missions to find planets similar to Kelper-452b, but much closer to Earth. We could do a lot more follow-up with those planets, and even start to think about visiting one day.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201709/p_10101259/vilegw_01180618210.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/10124622.mp3<p></p>
+<p>Question&#xFF1A;What do we know about the planet Kepler-452b?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201709/p_10101259/iwzqie_01180618213.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/10124622.mp3<br>
+<em><strong>A : It is the most similar to the Earth-sun system found so far.</strong></em><br>
+B : It circles the sun, just like Earth.<br>
+C : The temperature on it is extremely high.<br>
+D : It is the first planet the Kepler telescope discovered.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;Kepler-452b&#x662F;&#x76EE;&#x524D;&#x6700;&#x63A5;&#x8FD1;&#x65E5;&#x5730;&#x7CFB;&#x7EDF;&#x7684;&#x884C;&#x661F;&#x3002;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;Which of the following statements about Kepler-452b is true?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201709/p_10101259/gchkhz_01180618214.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/10124622.mp3<br>
+A : Life on Kepler-452b, if there were, will be the same as Earth.<br>
+<em><strong>B : Kepler-452b is thicker than Earth so weight of everything is different.</strong></em><br>
+C : People already understood how life evolves on another planet.<br>
+D : Kepler-452b is believed to have life on it because it looks like Earth.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;Kepler-452b&#x6BD4;&#x5730;&#x7403;&#x539A;&#x91CD;&#xFF0C;&#x56E0;&#x800C;&#x4E0A;&#x9762;&#x7684;&#x91CD;&#x91CF;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x3002;&#x5176;&#x4E0A;&#x9762;&#x5982;&#x679C;&#x6709;&#x751F;&#x547D;&#xFF0C;&#x5F62;&#x6001;&#x4E5F;&#x4E0E;&#x5730;&#x7403;&#x4E0A;&#x7684;&#x5927;&#x4E0D;&#x540C;&#x3002;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;According to the scientists, what is the next step after this discovery?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201709/p_10101259/ikaeyo_01180618215.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit14/10124622.mp3<br>
+A : To stop studying Kepler-452b because it is too far.<br>
+B : To make more researches on Kepler-452b&#x2019;s similarities with Earth.<br>
+C : To make plans for space travel to Kelper-452b.<br>
+<em><strong>D : To find planets similar to Kelper-452b but closer to Earth.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x6700;&#x540E;&#x63D0;&#x5230;&#xFF0C;&#x7531;&#x4E8E;Kepler-452b&#x8DDD;&#x79BB;&#x5730;&#x7403;&#x8FC7;&#x4E8E;&#x9065;&#x8FDC;&#xFF0C;&#x79D1;&#x5B66;&#x5BB6;&#x4E0B;&#x4E00;&#x6B65;&#x5C06;&#x7EE7;&#x7EED;&#x5BFB;&#x627E;&#x548C;&#x5730;&#x7403;&#x76F8;&#x4F3C;&#x4E14;&#x8DDD;&#x79BB;&#x8FD1;&#x4E00;&#x4E9B;&#x7684;&#x884C;&#x661F;&#xFF0C;&#x751A;&#x81F3;&#x5728;&#x672A;&#x6765;&#x7684;&#x67D0;&#x4E00;&#x5929;&#x62B5;&#x8FBE;&#x90A3;&#x91CC;&#x3002;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

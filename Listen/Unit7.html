@@ -1,0 +1,444 @@
+<!DOCTYPE html><html><head>
+      <title>Unit7</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-7-1031651651">Unit 7 1031651651</h1>
+
+<h2 class="mume-header" id="part-1-8956d4kn">Part 1 8956d4kn</h2>
+
+<h3 class="mume-header" id="question-1000908800">Question 1000908800</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p>M: This machine looks fine, but I&#x2019;m just concerned about its maintenance, since it&#x2019;ll have to operate for long periods of time in very cold temperatures.</p><p>W: We have several other models that are especially adaptive for rough conditions. Would you like to see them?</p><p>Q: What kind of machine does the man want?</p><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_102/201510/9c851359-4327-4977-a5cc-db1f38a46261.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/1000908800.mp3<br>
+A : A machine that has the same adaptive capacity as other models.<br>
+B : A machine that can have long time of free maintenance.<br>
+C : A machine that is fine to look and easy to use.<br>
+<em><strong>D : A machine that can work continuously in very cold weather.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;None<p></p>
+<h3 class="mume-header" id="question-1000908783">Question 1000908783</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p>M: Have you watched a TV series called &#x201C;Fawlty Towers?&#x201D; It is a show produced by the BBC.</p><p>W: Oh, yes. That&#x2019;s my absolute favorite. It always makes me laugh. In fact, it makes me cry with laughter sometimes. The more bad things that happen to the man, I mean the main character, the more I laugh.</p><p>Q: What kind of show are they talking about?</p><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_102/201510/f5529bf2-3583-4345-a70f-f660b9460d71.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/1000908783.mp3<br>
+<em><strong>A : A show that makes the audience laugh.</strong></em><br>
+B : A show that describes happy things in life.<br>
+C : A show that has only one main character.<br>
+D : A show that is a favorite of the British.<br>
+&#x89E3;&#x6790;&#xFF1A;None<p></p>
+<h3 class="mume-header" id="question-1000908798">Question 1000908798</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p>M: I&#x2019;d like to ask some questions about your insurance policies. I bought a house recently and would like to insure it.</p><p>W: I see. Here&#x2019;s a pamphlet about our home insurance policy. May I ask how much you paid for your home and where you live? These two things determine how much your premiums are.</p><p>Q: What is the man inquiring about?</p><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_102/201510/195306a4-844d-45b2-9ad7-dbd6f8be62e1.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/1000908798.mp3<br>
+A : A pamphlet about home insurance policies.<br>
+B : The location of the house that is for sale.<br>
+C : The price of the house he wants to buy.<br>
+<em><strong>D : Insurance policies regarding private homes.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;None<p></p>
+<h3 class="mume-header" id="question-1000908787">Question 1000908787</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p>W: I should join a fitness center. I am getting fat and out of shape.</p><p>M: I&#x2019;m afraid you are. But what you really need is stop smoking. That&#x2019;s the main reason why you&#x2019;re unhealthy. Why don&#x2019;t you try smoking just five cigarettes a day? That would be 25 percent of your current daily amount. If that works, then you might be able to quit completely.</p><p>Q: Why does the man advise the woman to stop smoking?</p><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_102/201510/d5273f4a-17a9-47a8-b4b8-ecad59a49290.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/1000908787.mp3<br>
+<em><strong>A : Smoking has caused her to be unhealthy.</strong></em><br>
+B : Smoking is not permitted in a fitness center.<br>
+C : Smoking has made her grow fat.<br>
+D : Smoking has made her get out of shape.<br>
+&#x89E3;&#x6790;&#xFF1A;None<p></p>
+<h3 class="mume-header" id="question-1000908785">Question 1000908785</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p>W: Hi, Mike, are you watching the latest news report about the war?</p><p>M: Yes, on Channel Three. The two sides declared a short ceasefire, but it broke down earlier today. Several military targets were destroyed by bombing, and many civilians were among the dead and wounded.</p><p>Q: What does the man say about the war?</p><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_102/201510/d31833fa-a2ab-4fd0-8519-bbdf3638ba6b.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/1000908785.mp3<br>
+A : The war has destroyed most of the military targets.<br>
+B : The two sides have finally agreed to a ceasefire.<br>
+C : The two sides declared war on each other earlier today.<br>
+<em><strong>D : The war has killed and injured many innocent people.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;None<p></p>
+<h3 class="mume-header" id="question-1000908777">Question 1000908777</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p>M: Oh, I feel I am mentally burned out from schoolwork. I have to spend so much time attending classes and completing assignments.</p><p>W: Why don&#x2019;t you give yourself a break and pick up a popular novel? You need to relax sometimes.</p><p>Q: Why does the man feel bothered?</p><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_102/201510/4551ed2d-b564-4bc9-ab1c-998cfcc7ada5.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/1000908777.mp3<br>
+A : He can&#x2019;t complete homework on time.<br>
+<em><strong>B : He has too much mental pressure.</strong></em><br>
+C : He can&#x2019;t find a good popular novel.<br>
+D : He has too many books to read.<br>
+&#x89E3;&#x6790;&#xFF1A;None<p></p>
+<h2 class="mume-header" id="part-2-tx22srct">Part 2 tx22srct</h2>
+
+<h3 class="mume-header" id="question-10905">Question 10905</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">M: Hi, May, how about going swimming this weekend?</div><p style="text-align:justify">W: Oh, sorry, Rob, I don&apos;t know how to swim.</p><p style="text-align:justify">M: Really? I think swimming is a very popular activity in the UK and it is said that four in five adults in the UK are good swimmers.</p><p style="text-align:justify">W: You&apos;re right. Most people recognize that swimming is very important for safety and good for fitness. But maybe some people weren&apos;t introduced to the water early enough and they don&apos;t have the confidence to start swimming later in life. Just like me.</p><p style="text-align:justify">M: And in fact experts say that the best time to learn is when we&apos;re babies&#xA0;or children.</p><p style="text-align:justify">W: That makes sense. I think a lot of babies are natural swimmers, so it&apos;s good for them to be in the water from an early age.</p><p style="text-align:justify">M: As long as they&apos;ve been supervised well.</p><p style="text-align:justify">W: Definitely! Babies as young as three months old can start swimming. But there are still many people like me who didn&apos;t start learning swimming in our childhood. What can those people do?</p><p style="text-align:justify">M: Ah, well there are a number of schemes to encourage people to swim. I know one called &quot;Big Slash&quot;, which celebrates swimming and wants to get more people into the water, whether they&apos;re adults or children.</p><p style="text-align:justify">W: That sounds wonderful. Can you tell me more about this scheme?</p><p style="text-align:justify">M: They always arrange many swimming classes for adults and the coach will use some techniques to encourage adults to swim.</p><p style="text-align:justify">W: I am interested in it. Do you know how I can participate?</p><p style="text-align:justify">M: Well, this Saturday in Central Pool they will hold an orientation session for beginners. If you have time, you can go and have a look.</p><p style="text-align:justify">W: Oh, thanks a lot.</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018171208365.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/10905.mp3<p></p>
+<p>Question&#xFF1A;How many adults in the UK cannot swim according to the conversation?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018171216237.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/10905.mp3<br>
+<em><strong>A : 1/5.</strong></em><br>
+B : 4/5.<br>
+C : 1/4.<br>
+D : 3/4.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x7537;&#x58EB;&#x63D0;&#x5230;I think swimming is a very popular activity in the UK and it is said that four in five adults in the UK are good swimmers&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x6E38;&#x6CF3;&#x7684;&#x6210;&#x5E74;&#x4EBA;&#x5E94;&#x4E3A;&#x4E94;&#x5206;&#x4E4B;&#x4E00;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;Why cannot the woman swim?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/2013101817122455.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/10905.mp3<br>
+A : Because she is afraid of water since her friend was drowned when she was little.<br>
+B : Because her confidence was destroyed by her parents in her early life.<br>
+C : Because she doesn&apos;t have a good coach.<br>
+<em><strong>D : Because she didn&apos;t learn it when she was little and now she doesn&apos;t have the courage to start learning.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;&#x97F3;&#x9891;&#x5185;&#x5BB9;&#xFF0C;&#x5973;&#x58EB;&#x4E0D;&#x4F1A;&#x6E38;&#x6CF3;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x5728;&#x4E8E;&#x5176;&#x5E74;&#x9F84;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#x5E76;&#x672A;&#x5B66;&#x4F1A;&#x6E38;&#x6CF3;&#xFF0C;&#x800C;&#x968F;&#x7740;&#x5E74;&#x9F84;&#x7684;&#x589E;&#x957F;&#xFF0C;&#x81EA;&#x4FE1;&#x5FC3;&#x5C31;&#x53D8;&#x5F97;&#x4E0D;&#x8DB3;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What does the woman think of the view that the best time to learn swim is in childhood?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018171232455.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/10905.mp3<br>
+A : It makes sense because children can learn everything in a quick pace.<br>
+B : It makes sense because children are fond of water.<br>
+<em><strong>C : It makes sense because children have some natural instinct to learn how to swim.</strong></em><br>
+D : It makes sense because children don&apos;t know fear as they are so young.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x7537;&#x58EB;&#x544A;&#x8BC9;&#x5973;&#x58EB;&#xFF0C;&#x636E;&#x4E13;&#x5BB6;&#x79F0;&#xFF0C;&#x6700;&#x4F73;&#x5B66;&#x4E60;&#x6E38;&#x6CF3;&#x7684;&#x65F6;&#x95F4;&#x662F;babies or children&#x3002;&#x5973;&#x58EB;&#x540C;&#x610F;&#x4ED6;&#x7684;&#x89C2;&#x70B9;&#xFF0C;&#x5979;&#x8BA4;&#x4E3A;&#x513F;&#x7AE5;&#x5929;&#x751F;&#x5C31;&#x662F;&#x5F88;&#x597D;&#x7684;&#x6E38;&#x6CF3;&#x8005;&#xFF08;a lot of babies are natural swimmers&#xFF09;&#xFF0C;&#x8A00;&#x4E0B;&#x4E4B;&#x610F;&#x5C31;&#x662F;&#x4ED6;&#x4EEC;&#x5BF9;&#x4E8E;&#x6E38;&#x6CF3;&#x8FD9;&#x4E00;&#x8FD0;&#x52A8;&#x6709;&#x4E00;&#x79CD;&#x81EA;&#x7136;&#x672C;&#x80FD;&#x3002;&#x56E0;&#x6B64;&#x6B64;&#x9898;&#x5E94;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What do we know about &quot;Big Slash&quot;?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018171242997.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/10905.mp3<br>
+A : People can learn some techniques about swimming.<br>
+<em><strong>B : The coaches there have many methods to encourage adults to swim.</strong></em><br>
+C : It is a program teaching children how to swim.<br>
+D : It has programs every Saturday.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x4ECE;&#x97F3;&#x9891;&#x4E2D;&#x53EF;&#x77E5;Big Slash&#x662F;&#x4E00;&#x4E2A;&#x6559;&#x6E38;&#x6CF3;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x6559;&#x5B66;&#x5BF9;&#x8C61;&#x662F;&#x6210;&#x4EBA;&#x548C;&#x513F;&#x7AE5;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x6559;&#x7EC3;&#x61C2;&#x5F97;&#x8FD0;&#x7528;&#x6280;&#x5DE7;&#x9F13;&#x52B1;&#x6210;&#x4EBA;&#x514B;&#x670D;&#x5165;&#x6C34;&#x7684;&#x6050;&#x60E7;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x5E76;&#x672A;&#x63D0;&#x53CA;&#x6B64;&#x9879;&#x76EE;&#x7684;&#x5177;&#x4F53;&#x65F6;&#x95F4;&#x548C;&#x65E5;&#x671F;&#xFF0C;&#x56E0;&#x6B64;A&#x4E0D;&#x6B63;&#x786E;&#xFF1B;&#x6B64;&#x9879;&#x76EE;&#x7684;&#x5BF9;&#x8C61;&#x65E2;&#x6709;&#x513F;&#x7AE5;&#x4E5F;&#x6709;&#x6210;&#x4EBA;&#xFF0C;&#x56E0;&#x6B64;B&#x4E5F;&#x4E0D;&#x6B63;&#x786E;&#xFF1B;&#x97F3;&#x9891;&#x4E2D;&#x5E76;&#x672A;&#x63D0;&#x53CA;&#x5B66;&#x5458;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x9879;&#x76EE;&#x4E2D;&#x5B66;&#x5230;&#x4E9B;&#x6E38;&#x6CF3;&#x6280;&#x5DE7;&#xFF0C;&#x800C;&#x662F;&#x8BF4;&#x6559;&#x7EC3;&#x4F1A;&#x8FD0;&#x7528;&#x4E9B;&#x6280;&#x5DE7;&#x9F13;&#x52B1;&#x6210;&#x5E74;&#x4EBA;&#x5B66;&#x4E60;&#x6E38;&#x6CF3;&#xFF0C;&#x56E0;&#x6B64;C&#x4E5F;&#x4E0D;&#x591F;&#x51C6;&#x786E;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<h2 class="mume-header" id="part-3-qr108c4b">Part 3 qr108c4b</h2>
+
+<h3 class="mume-header" id="question-19154954">Question 19154954</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align: justify;">Related to the use-it-or-lose-it law is the keep-moving principle. We learn about stagnation from nature: a river that stops moving gets smelly. The same thing happens to people who stop moving, either mentally or physically. Those who play contact sports know that the player who usually gets hurt the most is the one who is standing still. Of course, you&#x2019;ll need some time to catch your breath every so often, but the essential massage is keep moving, extending and learning. Ships last a lot longer when they go to sea than when they stay in the harbor. The same is true for airplanes. You don&#x2019;t preserve an airplane by keeping it on the ground. You preserve it by keeping it in service. We also get to live a long healthy life by staying in service. Longevity statistics reveal that the average person doesn&#x2019;t last very long after retirement. The moral here is &#x201C;don&#x2019;t retire&#x201D;. If a fellow says &#x201C;I&#x2019;m 94 years old and I worked all my life&#x201D;, we need to realize that is how we got to be 94&#x2014;by staying involved. George Bernard Shaw won a Nobel Prize when he was nearly 70. Benjamin Franklin produced some of his best writings at the age of 84. And Pablo Picasso put brush to canvas right through his eighties. Isn&#x2019;t the issue how old we think we are? A bonus with the keep-moving principle is that while we keep moving, we don&#x2019;t have a chance to worry. Hence, we avoid the dreaded &#x201C;paralysis by analysis&#x201D;.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/jqfbkl_27155834766.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/19154954.mp3<p></p>
+<p>Question&#xFF1A;What does the speaker say about players of contact sports?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/clpywc_27155834768.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/19154954.mp3<br>
+A : They are likely to get injured when moving too fast.<br>
+<em><strong>B : They need to keep moving to avoid getting hurt.</strong></em><br>
+C : They have to learn how to avoid body contact.<br>
+D : They believe in team spirit for good performance.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x4ECE;&#x4E8B;&#x63A5;&#x89E6;&#x5F0F;&#x8FD0;&#x52A8;&#x7684;&#x4EBA;&#x77E5;&#x9053;&#xFF0C;&#x901A;&#x5E38;&#xFF0C;&#x6700;&#x5BB9;&#x6613;&#x53D7;&#x4F24;&#x7684;&#x8FD0;&#x52A8;&#x5458;&#x5F80;&#x5F80;&#x662F;&#x7AD9;&#x7740;&#x4E0D;&#x52A8;&#x7684;&#x4EBA;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x4ECE;&#x4E8B;&#x63A5;&#x89E6;&#x5F0F;&#x8FD0;&#x52A8;&#x7684;&#x8FD0;&#x52A8;&#x5458;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x8FD0;&#x52A8;&#x72B6;&#x6001;&#x6765;&#x907F;&#x514D;&#x53D7;&#x4F24;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What do longevity statistics reveal about the average person?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/jeofqg_27155834768.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/19154954.mp3<br>
+A : They tend to live a longer life with early retirement.<br>
+<em><strong>B : They do not have many years to live after retirement.</strong></em><br>
+C : They do not start enjoying life until full retirement.<br>
+D : They keep themselves busy even after retirement.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x5BFF;&#x547D;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x663E;&#x793A;&#xFF0C;&#x666E;&#x901A;&#x4EBA;&#x9000;&#x4F11;&#x540E;&#x90FD;&#x6D3B;&#x4E0D;&#x4E86;&#x592A;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;What bonus does the keep-moving principle bring us according to the speaker?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/xkrcbg_27155834769.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/19154954.mp3<br>
+A : It slows down our aging process.<br>
+B : It provides us with more chances to learn.<br>
+C : It enables us to accomplish more in life.<br>
+<em><strong>D : It prevents us from worrying.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x6700;&#x540E;&#x63D0;&#x5230;&#xFF0C;&#x4FDD;&#x6301;&#x8FD0;&#x52A8;&#x7684;&#x539F;&#x5219;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E0D;&#x65AD;&#x8FD0;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6CA1;&#x6709;&#x65F6;&#x95F4;&#x611F;&#x5230;&#x5FE7;&#x8651;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<h3 class="mume-header" id="question-19154957">Question 19154957</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;Dating from as far back as the 12th century, they are claimed to be the rarest historic buildings in western Europe. These buildings offer vital insight into Scandinavia&#x2019;s Viking past. But now, with only 30 wooden churches remaining and their condition deteriorating, experts are working to preserve the structures for future generations. Some of these spectacular churches are no more than small buildings, barely four metres wide and six metres tall. Others are much larger structures that soar up to 40 metres into the cold air. Most consist of timber frames that rest on stone blocks. This means that they have no foundations. Although many of the churches appear from the outside to be complex structures, they normally feature only a single storey but numerous different roof levels.<br><br>
+<br><br>
+Staff from the Norwegian government have carried out conservation work on 10 of the churches over the past two years. Most of these churches date from between the 12th and 14th centuries. Other churches were conserved in previous years. So far, specialists have worked to add preservative materials to the churches&#x2019; exteriors. They also replaced rotting roots and halted the sinking of the churches into the ground. In two cases, huge machines have been used to lift the buildings up to 30 centimetres into the air. This was accomplished so that the team could examine and repair the churches&#x2019; original medieval stone blocks. The team plans to return to around a dozen of the buildings to assess progress and consider further action.<br><br>
+<br><br>
+The earliest free-standing wooden church was probably built in Norway in around 1080. However, the largest known wooden churches were built from the 1130s onwards. This period was one of inter-elite rivalry, in which nobles sought to increase their influence by funding the construction of churches and other buildings. The reason for constructing the buildings from wood is probably that ideally proportioned straight and slender timber was available in large quantities in Scandinavia&#x2019;s vast pine forests. As wood was so plentiful, it was cheaper to use than the stone used in the buildings of other European cultures. The area&#x2019;s ship-building tradition, partly established by the Vikings, also meant that sophisticated carpentry was a major aspect of the local culture. The complex style of the medieval wooden church carvings and the skills used to make them almost certainly derive from the ancient Viking tradition.</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/yckdig_27160438459.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/19154957.mp3<p></p>
+<p>Question&#xFF1A;What does the speaker say about the Viking wooden churches?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/mkfjxg_27160438462.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/19154957.mp3<br>
+A : They are renovated to attract tourists.<br>
+B : They are part of the Christian tradition.<br>
+C : They are the oldest buildings in Europe.<br>
+<em><strong>D : They are in worsening condition.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x73B0;&#x5728;&#x53EA;&#x5269;30&#x680B;&#x6728;&#x8D28;&#x7ED3;&#x6784;&#x7684;&#x6559;&#x5802;&#xFF0C;&#x800C;&#x4E14;&#x5B83;&#x4EEC;&#x7684;&#x72B6;&#x6001;&#x8D8A;&#x6765;&#x8D8A;&#x7CDF;&#x7CD5;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What is special about most of the Viking wooden churches?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/bzzmcy_27160438462.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/19154957.mp3<br>
+A : They consist of several storeys.<br>
+B : They are 40 metres tall on average.<br>
+<em><strong>C : They are without foundations.</strong></em><br>
+D : They have a history of 14 centuries.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x8FD9;&#x4E9B;&#x5EFA;&#x7B51;&#x5927;&#x591A;&#x6570;&#x90FD;&#x662F;&#x6728;&#x8D28;&#x6846;&#x67B6;&#x7ED3;&#x6784;&#xFF0C;&#x7F6E;&#x4E8E;&#x77F3;&#x5757;&#x4E0A;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5B83;&#x4EEC;&#x6CA1;&#x6709;&#x5730;&#x57FA;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;Why were the Viking churches constructed from wood?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/gigiel_27160438463.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit7/19154957.mp3<br>
+A : Wooden buildings kept the cold out.<br>
+B : The Vikings liked wooden structures.<br>
+C : Wood was harmonious with nature.<br>
+<em><strong>D : Timber was abundant in Scandinavia.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x7528;&#x6728;&#x6750;&#x5EFA;&#x9020;&#x8FD9;&#x4E9B;&#x5EFA;&#x7B51;&#xFF0C;&#x539F;&#x56E0;&#x53EF;&#x80FD;&#x5728;&#x4E8E;&#xFF0C;&#x5728;&#x65AF;&#x582A;&#x7684;&#x7EB3;&#x7EF4;&#x4E9A;&#x5E7F;&#x88A4;&#x7684;&#x677E;&#x6811;&#x6797;&#x4E2D;&#x6709;&#x5927;&#x91CF;&#x6BD4;&#x4F8B;&#x5300;&#x79F0;&#x4E14;&#x7B14;&#x76F4;&#x3001;&#x7EC6;&#x957F;&#x7684;&#x6728;&#x6750;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

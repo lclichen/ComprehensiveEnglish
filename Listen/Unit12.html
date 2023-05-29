@@ -1,0 +1,440 @@
+<!DOCTYPE html><html><head>
+      <title>Unit12</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-12-1031872435">Unit 12 1031872435</h1>
+
+<h2 class="mume-header" id="part-1-w3fibsyr">Part 1 w3fibsyr</h2>
+
+<h3 class="mume-header" id="question-19154953">Question 19154953</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">W: Are you watching any good shows these days?<br><br>
+M: Actually, yes. I&#x2019;m watching a great satire called <i>Frankie</i>. I think you&#x2019;d like it.<br><br>
+W: Really? What&#x2019;s it about?<br><br>
+M: It&#x2019;s about a real guy named Frankie. He is a famous comedian in New York and the show is a mixture of comedy and drama loosely depicting his life.<br><br>
+W: I&#x2019;m sorry. Do you mean to say, it&#x2019;s a real-life series about a real person? It&#x2019;s non-fiction, isn&#x2019;t it?<br><br>
+M: No&#x2026; not really, no. It&#x2019;s fiction, as what happens in every episode is made up. However, the lead role is a comedian by the name of Frankie, and he plays himself. So Frankie in both real life and in the TV show lives in New York City, is a comic, is divorced, and has two little daughters. All those things are true, but aside from him, all his friends and family are played by actors. And the plots and events that take place are also invented.<br><br>
+W: Oh, I think I see now. That sounds like a very original concept.<br><br>
+M: Yes, it is. In fact, the whole show is written, directed, edited and produced by him, and is very funny and has won many awards.<br><br>
+W: That&#x2019;s cool. I will try to download it. I&#x2019;m watching a comedy called <i>The Big Bang Theory</i>. It&#x2019;s a huge hit around the world.<br><br>
+M: Oh yes. I&#x2019;ve heard of it, but never actually watched it.<br><br>
+W: Well, then you should check it out. It&#x2019;s also very funny. It&#x2019;s about four male scientists and a female waitress. The men are very socially awkward but very bright. And this is contrasted by the lady&#x2019;s social skills and common sense. The show has been running for over ten years, and some of the actors are practically global superstars. Now that they are such famous celebrities.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/lyrtes_27155918649.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154953.mp3<p></p>
+<p>Question&#xFF1A;What does the man think of the satire <i>Frankie</i> he recently watched?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/kapocb_27155918650.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154953.mp3<br>
+A : It is educational.<br>
+<em><strong>B : It is enjoyable.</strong></em><br>
+C : It is divorced from real life.<br>
+D : It is adapted from a drama.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x7537;&#x58EB;&#x63D0;&#x5230;&#xFF0C;&#x8FD9;&#x90E8;&#x5267;&#x5F88;&#x6709;&#x8DA3;&#xFF0C;&#x8FD8;&#x83B7;&#x5F97;&#x4E86;&#x5F88;&#x591A;&#x5956;&#x9879;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;What does the man say is especial about the satire <i>Frankie</i>?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/lowzjd_27155918651.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154953.mp3<br>
+<em><strong>A : It is written, directed, edited and produced by Frankie himself.</strong></em><br>
+B : All the roles are played by famous actors and actresses.<br>
+C : It is based on the real-life experiences of some celebrities.<br>
+D : Its plots and events reveal a lot about Frankie&#x2019;s actual life.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x7537;&#x58EB;&#x63D0;&#x5230;&#xFF0C;<i>Frankie</i>&#x8FD9;&#x90E8;&#x5267;&#x7684;&#x4E3B;&#x6F14;Frankie&#x540C;&#x65F6;&#x62C5;&#x4EFB;&#x7F16;&#x5267;&#x3001;&#x5BFC;&#x6F14;&#x3001;&#x526A;&#x8F91;&#x548C;&#x76D1;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What does the woman say she is going to do with the satire <i>Frankie</i>?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/lhuqzj_27155918651.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154953.mp3<br>
+A : Watch it with the man.<br>
+B : Go to the theater and enjoy it.<br>
+C : Recommend it to her friends.<br>
+<em><strong>D : Download and watch it.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x63D0;&#x5230;&#xFF0C;&#x5979;&#x4F1A;&#x628A;&#x8FD9;&#x90E8;&#x5267;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x89C2;&#x770B;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What does the woman say about the comedy <i>The Big Bang Theory</i>?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/urrovq_27155918652.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154953.mp3<br>
+A : It is against common sense.<br>
+<em><strong>B : It has been showing for over a decade.</strong></em><br>
+C : It is a ridiculous piece of satire.<br>
+D : It has drawn criticisms from scientists.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x63D0;&#x5230;&#xFF0C;<i>The Big Bang Theory</i>&#x8FD9;&#x90E8;&#x5267;&#x5DF2;&#x7ECF;&#x64AD;&#x51FA;&#x5341;&#x591A;&#x5E74;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<h3 class="mume-header" id="question-19154952">Question 19154952</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">M: Today, our guest is Rosie Mullender, who works as a features editor for a fashion magazine. Hi Rosie, you&#x2019;re a features editor at one of the most widely-read women&#x2019;s magazines in the U.K. What kind of responsibilities does that job entail?<br><br>
+W: We spend our days looking at ideas from journalists, writing copy for the magazine and website, and editing. We do random things like asking people in the street questions and testing sports clothing. We also do less tangible things like understanding what our readers want. It&#x2019;s certainly varied and sometimes bizarre.<br><br>
+M: During your working day what kind of work might you typically do?<br><br>
+W: My day mainly incorporates responding to emails, writing and editing stories and coming up with new feature ideas.<br><br>
+M: How does the job of features editor differ from that of fashion editor or other editorial positions?<br><br>
+W: The features team deals with articles such as careers, reports, confidence and confessions&#x2014;everything except fashion and beauty.<br><br>
+M: A lot of people believe that working at a magazine is a glamorous job. Is this an accurate representation of what you do?<br><br>
+W: I&#x2019;d say it&#x2019;s glamorous to an extent, but not in the way it&#x2019;s portrayed in films. We do have our moments, such as interviewing celebrities and attending parties, which is a huge thrill. Ultimately though, we&#x2019;re the same as our readers, but working in a job we&#x2019;re all very lucky to have.<br><br>
+M: Did you have to overcome any difficulties to reach this point in your career? How did you manage to do this?<br><br>
+W: I had to be really persistent and it was very hard work. After three years of working in a petrol station and doing unpaid work, I still hadn&#x2019;t managed to get an entry-level job. I was lucky that my last desperate attempt led to a job. I told myself that all experiences make you a better journalist in the long run and luckily, I was right.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/zxqtgf_27155858277.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154952.mp3<p></p>
+<p>Question&#xFF1A;What is the woman&#x2019;s profession?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/fninaw_27155858279.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154952.mp3<br>
+A : Fashion designer.<br>
+B : Website designer.<br>
+C : Magazine reporter.<br>
+<em><strong>D : Features editor.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E00;&#x5F00;&#x59CB;&#xFF0C;&#x7537;&#x58EB;&#x5C31;&#x4ECB;&#x7ECD;&#x4E86;&#x5973;&#x58EB;&#x7684;&#x804C;&#x4E1A;&#xFF0C;&#x8BF4;&#x5979;&#x662F;&#x4E00;&#x540D;&#x65F6;&#x5C1A;&#x6742;&#x5FD7;&#x7684;&#x4E13;&#x680F;&#x7F16;&#x8F91;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What is one of the woman&#x2019;s main responsibilities?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/uqtzhr_27155858279.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154952.mp3<br>
+A : Consulting fashion experts.<br>
+B : Designing sports clothing.<br>
+C : Interviewing job-seekers.<br>
+<em><strong>D : Answering daily emails.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x63D0;&#x5230;&#xFF0C;&#x5979;&#x7684;&#x65E5;&#x5E38;&#x5DE5;&#x4F5C;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x56DE;&#x590D;&#x90AE;&#x4EF6;&#x3001;&#x64B0;&#x5199;&#x548C;&#x7F16;&#x8F91;&#x65B0;&#x95FB;&#x3001;&#x63D0;&#x4F9B;&#x65B0;&#x7684;&#x4E13;&#x680F;&#x521B;&#x610F;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What do many people think about the woman&#x2019;s job?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/ohaask_27155858280.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154952.mp3<br>
+A : It is challenging.<br>
+B : It is fashionable.<br>
+C : It is tiresome.<br>
+<em><strong>D : It is fascinating.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x7537;&#x58EB;&#x63D0;&#x5230;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x8BA4;&#x4E3A;&#x5728;&#x6742;&#x5FD7;&#x793E;&#x5DE5;&#x4F5C;&#x662F;&#x4E00;&#x4EF6;&#x7279;&#x522B;&#x4EE4;&#x4EBA;&#x5411;&#x5F80;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;What helped the woman to get her current position?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/pldcdk_27155858280.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154952.mp3<br>
+A : Her competence.<br>
+B : Her experience.<br>
+C : Her confidence.<br>
+<em><strong>D : Her persistence.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#xFF0C;&#x7537;&#x58EB;&#x95EE;&#x5973;&#x58EB;&#x662F;&#x5982;&#x4F55;&#x83B7;&#x5F97;&#x8FD9;&#x4EFD;&#x5DE5;&#x4F5C;&#x7684;&#xFF0C;&#x5973;&#x58EB;&#x56DE;&#x7B54;&#x8BF4;&#xFF0C;&#x5979;&#x5FC5;&#x987B;&#x575A;&#x6301;&#xFF0C;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4EF6;&#x5BB9;&#x6613;&#x7684;&#x4E8B;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<h2 class="mume-header" id="part-2-6uv45paz">Part 2 6uv45paz</h2>
+
+<h3 class="mume-header" id="question-19154954">Question 19154954</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align: justify;">Related to the use-it-or-lose-it law is the keep-moving principle. We learn about stagnation from nature: a river that stops moving gets smelly. The same thing happens to people who stop moving, either mentally or physically. Those who play contact sports know that the player who usually gets hurt the most is the one who is standing still. Of course, you&#x2019;ll need some time to catch your breath every so often, but the essential massage is keep moving, extending and learning. Ships last a lot longer when they go to sea than when they stay in the harbor. The same is true for airplanes. You don&#x2019;t preserve an airplane by keeping it on the ground. You preserve it by keeping it in service. We also get to live a long healthy life by staying in service. Longevity statistics reveal that the average person doesn&#x2019;t last very long after retirement. The moral here is &#x201C;don&#x2019;t retire&#x201D;. If a fellow says &#x201C;I&#x2019;m 94 years old and I worked all my life&#x201D;, we need to realize that is how we got to be 94&#x2014;by staying involved. George Bernard Shaw won a Nobel Prize when he was nearly 70. Benjamin Franklin produced some of his best writings at the age of 84. And Pablo Picasso put brush to canvas right through his eighties. Isn&#x2019;t the issue how old we think we are? A bonus with the keep-moving principle is that while we keep moving, we don&#x2019;t have a chance to worry. Hence, we avoid the dreaded &#x201C;paralysis by analysis&#x201D;.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/jqfbkl_27155834766.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154954.mp3<p></p>
+<p>Question&#xFF1A;What does the speaker say about players of contact sports?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/clpywc_27155834768.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154954.mp3<br>
+A : They have to learn how to avoid body contact.<br>
+B : They are likely to get injured when moving too fast.<br>
+<em><strong>C : They need to keep moving to avoid getting hurt.</strong></em><br>
+D : They believe in team spirit for good performance.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x4ECE;&#x4E8B;&#x63A5;&#x89E6;&#x5F0F;&#x8FD0;&#x52A8;&#x7684;&#x4EBA;&#x77E5;&#x9053;&#xFF0C;&#x901A;&#x5E38;&#xFF0C;&#x6700;&#x5BB9;&#x6613;&#x53D7;&#x4F24;&#x7684;&#x8FD0;&#x52A8;&#x5458;&#x5F80;&#x5F80;&#x662F;&#x7AD9;&#x7740;&#x4E0D;&#x52A8;&#x7684;&#x4EBA;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x4ECE;&#x4E8B;&#x63A5;&#x89E6;&#x5F0F;&#x8FD0;&#x52A8;&#x7684;&#x8FD0;&#x52A8;&#x5458;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x8FD0;&#x52A8;&#x72B6;&#x6001;&#x6765;&#x907F;&#x514D;&#x53D7;&#x4F24;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What do longevity statistics reveal about the average person?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/jeofqg_27155834768.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154954.mp3<br>
+A : They do not start enjoying life until full retirement.<br>
+<em><strong>B : They do not have many years to live after retirement.</strong></em><br>
+C : They keep themselves busy even after retirement.<br>
+D : They tend to live a longer life with early retirement.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x5BFF;&#x547D;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x663E;&#x793A;&#xFF0C;&#x666E;&#x901A;&#x4EBA;&#x9000;&#x4F11;&#x540E;&#x90FD;&#x6D3B;&#x4E0D;&#x4E86;&#x592A;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;What bonus does the keep-moving principle bring us according to the speaker?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/xkrcbg_27155834769.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19154954.mp3<br>
+A : It provides us with more chances to learn.<br>
+B : It enables us to accomplish more in life.<br>
+C : It slows down our aging process.<br>
+<em><strong>D : It prevents us from worrying.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x6700;&#x540E;&#x63D0;&#x5230;&#xFF0C;&#x4FDD;&#x6301;&#x8FD0;&#x52A8;&#x7684;&#x539F;&#x5219;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E0D;&#x65AD;&#x8FD0;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6CA1;&#x6709;&#x65F6;&#x95F4;&#x611F;&#x5230;&#x5FE7;&#x8651;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<h3 class="mume-header" id="question-19143206">Question 19143206</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align: justify;">Teachers and students alike have experienced the curious paradox that beginners, as a rule, tend to think too little about what they are doing because they think too much about what they are doing. Take, for example, people who are learning to play basketball or the piano. They have to give so much thought and attention to the low-level mechanics of handling the ball or fingering the keys or reading the music, that they are unable to give any thought to the thing that matters&#x2014;the game, or the music, respectively.<br><br>
+&#xA0;<br><br>
+With experts, it&#x2019;s just the other way around. They&#x2019;re open to the tactical possibilities and the musical challenges precisely because they&#x2019;re freed, through skill, from the need to pay attention to the low-level details of how to play. Indeed, when the expert pays attention to the mechanics, this is liable to disrupt performance. This has led some to say that the expert operates in a zone &#x201C;beyond thought&#x201D;, in a state of flow. But this is misleading. Expert performance is not beyond thought. Smart basketball players or skilled musicians need to pay close attention to the demands of high performance, to the challenges to be overcome. What they don&#x2019;t need to do&#x2014;what would be a distraction&#x2014;is to have to think about where their fingers are, or how to control the ball while running. It&#x2019;s not mechanics, but the play itself, that absorbs the expert&#x2019;s intelligence.<br><br>
+&#xA0;<br><br>
+A nice video published online last month sheds light on expertise and the conscious mind. The video reports a new study using an eye-tracking device. It turns out that the less-skilled pianist spends more time looking at her fingers than does the expert who, in contrast, is more likely to be looking at the sheet music, or looking ahead at keys he&#x2019;s not yet playing. In general, the expert&#x2019;s gaze was calmer and more stable.<br><br>
+&#xA0;<br><br>
+This is not a surprising finding. It supports what we might almost think of as conventional wisdom. But it&#x2019;s remarkable for all that, nonetheless. The eye tracker gives expert and learning performers a glimpse into what they do without thinking about it. The topic of the nature of skill&#x2014;and the differences between beginners and experts&#x2014;has been one of considerable discussion in cognitive science and philosophy.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201908/p_10103377/wkuxgb_29162653330.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19143206.mp3<p></p>
+<p>Question&#xFF1A;What does the speaker say about beginners and expert pianists?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201908/p_10103377/ugkiwy_29162653333.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19143206.mp3<br>
+A : They differ in their appreciation of music.<br>
+B : They finger the piano keys in different ways.<br>
+C : They choose different pieces of music to play.<br>
+<em><strong>D : They focus their attention on different things.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x4EE5;&#x6B63;&#x5728;&#x5B66;&#x5F39;&#x94A2;&#x7434;&#x6216;&#x8005;&#x6253;&#x7BEE;&#x7403;&#x7684;&#x4EBA;&#x4E3A;&#x4F8B;&#xFF0C;&#x4ED6;&#x4EEC;&#x5FC5;&#x987B;&#x5145;&#x5206;&#x8003;&#x8651;&#x548C;&#x5173;&#x6CE8;&#x57FA;&#x7840;&#x6280;&#x5DE7;&#xFF0C;&#x4EE5;&#x81F3;&#x4E8E;&#x65E0;&#x6687;&#x8003;&#x8651;&#x771F;&#x6B63;&#x91CD;&#x8981;&#x7684;&#x4E1C;&#x897F;&#xFF1B;&#x800C;&#x4E13;&#x5BB6;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x57FA;&#x7840;&#x7684;&#x7EC6;&#x8282;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x521D;&#x5B66;&#x8005;&#x548C;&#x94A2;&#x7434;&#x6F14;&#x594F;&#x5927;&#x5E08;&#x7684;&#x5173;&#x6CE8;&#x70B9;&#x4E0D;&#x540C;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;What do smart basketball players do according to the speaker?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201908/p_10103377/yyosnz_29162653333.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19143206.mp3<br>
+A : They use effective tactics to defeat their competitors.<br>
+B : They try hard to meet the spectators&#x2019; expectations.<br>
+<em><strong>C : They attach great importance to high performance.</strong></em><br>
+D : They manage to cooperate well with their teammates.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x806A;&#x660E;&#x7684;&#x7BEE;&#x7403;&#x8FD0;&#x52A8;&#x5458;&#x6216;&#x5A34;&#x719F;&#x7684;&#x97F3;&#x4E50;&#x5BB6;&#x4F1A;&#x5BC6;&#x5207;&#x5173;&#x6CE8;&#x9AD8;&#x6C34;&#x5E73;&#x8868;&#x73B0;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x4EE5;&#x53CA;&#x9700;&#x8981;&#x514B;&#x670D;&#x7684;&#x6311;&#x6218;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What do we learn about the new study published in an online video?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201908/p_10103377/hiyfpc_29162653334.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit12/19143206.mp3<br>
+A : It adopts a conventional approach to research.<br>
+B : It marks a breakthrough in behavioral science.<br>
+C : It gives rise to controversy among experts.<br>
+<em><strong>D : It supports a piece of conventional wisdom.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x89C6;&#x9891;&#x6240;&#x5C55;&#x793A;&#x7684;&#x5185;&#x5BB9;&#x5E76;&#x4E0D;&#x662F;&#x4EE4;&#x4EBA;&#x60CA;&#x5947;&#x7684;&#x53D1;&#x73B0;&#xFF0C;&#x5B83;&#x8BC1;&#x5B9E;&#x4E86;&#x6211;&#x4EEC;&#x51E0;&#x4E4E;&#x90FD;&#x8BA4;&#x540C;&#x7684;&#x4F20;&#x7EDF;&#x89C2;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

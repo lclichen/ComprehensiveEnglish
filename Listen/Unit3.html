@@ -1,0 +1,472 @@
+<!DOCTYPE html><html><head>
+      <title>Unit3</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-3-1031484805">Unit 3 1031484805</h1>
+
+<h2 class="mume-header" id="part-1-8956d4kn">Part 1 8956d4kn</h2>
+
+<h3 class="mume-header" id="question-10882">Question 10882</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;W: Do you want to be my travel companion for the summer trip to Europe?&lt;O:P&gt;&lt;/O:P&gt; </p><p>M: Eh, I have been to many countries in Europe. Can you tell me some further information about the trip, like which cities you will visit, and how many days you will stay in each place?<span style="FONT-FAMILY: &#x5B8B;&#x4F53;; FONT-SIZE: 12pt; mso-bidi-font-family: &#x5B8B;&#x4F53;; mso-font-kerning: 0pt" lang="EN-US">&lt;O:P&gt;&lt;/O:P&gt;</span></p><br>Why does the man need some further information?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018164026504.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/10882.mp3<br>
+A : He would like to hear more details about the trip as he wants to join.<br>
+<em><strong>B : He needs to see whether the trip plan is suitable for him as he has already traveled around Europe.</strong></em><br>
+C : He wants to make some suggestions about the trip as he is an expert in traveling.<br>
+D : He wants to know whether his schedule can fit with the trip plan as he is busy.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x56E0;&#x4E3A;&#x7537;&#x58EB;&#x5DF2;&#x7ECF;&#x53BB;&#x8FC7;&#x6B27;&#x6D32;&#x5F88;&#x591A;&#x6B21;&#x4E86;&#xFF0C;&#x56E0;&#x6B64;&#x5F53;&#x5973;&#x58EB;&#x63D0;&#x8BAE;&#x8981;&#x4E0D;&#x8981;&#x548C;&#x5979;&#x4E00;&#x8D77;&#x53BB;&#x6B27;&#x6D32;&#x65F6;&#xFF0C;&#x7537;&#x58EB;&#x624D;&#x4F1A;&#x63D0;&#x51FA;&#x8981;&#x4E00;&#x4E9B;&#x7EC6;&#x8282;&#x6027;&#x5185;&#x5BB9;&#x7684;&#x8981;&#x6C42;&#x3002;&#x6240;&#x4EE5;&#x9009;D&#x3002;<p></p>
+<h3 class="mume-header" id="question-11182">Question 11182</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="TEXT-ALIGN: justify">W: I can&apos;t understand why my friend isn&apos;t here yet. We agreed to meet at 10:30. It&apos;s almost 11:00. Do you think we should try to call her or go look for her?<br>M: She probably just got tied up in traffic. Let&apos;s give her a few more minutes. <br>&#xA0;</div><br>What are they going to do?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109152050936.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11182.mp3<br>
+A : Go stand under the clock.<br>
+B : Check the time of high tide.<br>
+<em><strong>C : Wait a little longer.</strong></em><br>
+D : Look for the traffic light.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x4ECE;&#x97F3;&#x9891;&#x7684;&#x6700;&#x540E;&#x4E00;&#x53E5;&#x8BDD;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x4ED6;&#x4EEC;&#x5C06;&#x518D;&#x591A;&#x7B49;&#x51E0;&#x5206;&#x949F;&#x3002;&#x6240;&#x4EE5;&#x9009;C&#x3002;<p></p>
+<h3 class="mume-header" id="question-11180">Question 11180</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;W: This room is filled with smoke. I can hardly breathe. <br>M: I agree. Smoking should not be permitted in this room at all.<br><br>What can be concluded from this conversation?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109151904664.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11180.mp3<br>
+<em><strong>A : The man is bothered by the smoke.</strong></em><br>
+B : The man is not permitted in the room.<br>
+C : The room is on fire.<br>
+D : There is very little breeze in the room.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;&#x97F3;&#x9891;&#xFF0C;&#x4ECE;&#x7537;&#x58EB;&#x7684;&#x56DE;&#x7B54;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x4ED6;&#x540C;&#x610F;&#x5973;&#x58EB;&#x7684;&#x89C2;&#x70B9;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x4ED6;&#x4E5F;&#x5BF9;&#x5C4B;&#x91CC;&#x7684;&#x70DF;&#x5473;&#x5F88;&#x53CD;&#x611F;&#x3002;</p>
+<h3 class="mume-header" id="question-11137">Question 11137</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;W: You had met Professor Johnson before, right? How would you describe his lectures?<br>M: Well, let me put it this way: I could never stay awake in one of his classes without first drinking at least two cups of coffee.<br><br>What does the man imply?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141010102917119.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11137.mp3<br>
+A : He dropped out of Professor Johnson&apos;s class.<br>
+B : He&apos;ll probably take another class with Professor Johnson.<br>
+C : Students weren&apos;t allowed to bring drinks into Professor Johnson&apos;s class.<br>
+<em><strong>D : Professor Johnson&apos;s lectures were boring.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x5973;&#x58EB;&#x95EE;&#x7537;&#x58EB;&#x5BF9;&#x4E8E;&#x7EA6;&#x7FF0;&#x900A;&#x6559;&#x6388;&#x7684;&#x8BFE;&#x7684;&#x8BC4;&#x4EF7;&#xFF0C;&#x7537;&#x58EB;&#x56DE;&#x7B54;&#x8BF4;&#xFF1A;&#x4E0D;&#x5148;&#x559D;&#x4E0A;&#x81F3;&#x5C11;&#x4E24;&#x676F;&#x5496;&#x5561;&#x5C31;&#x5F88;&#x96BE;&#x5728;&#x4ED6;&#x8BFE;&#x4E0A;&#x9192;&#x7740;&#x3002;&#x7531;&#x6B64;&#x63A8;&#x65AD;&#x7537;&#x58EB;&#x8BA4;&#x4E3A;&#x7EA6;&#x7FF0;&#x900A;&#x6559;&#x6388;&#x7684;&#x8BFE;&#x5F88;&#x4E4F;&#x5473;&#x3002;</p>
+<h3 class="mume-header" id="question-11178">Question 11178</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;W: Would you like to come mountain-climbing with us? <br>M: That&apos;s the last thing in the world I ever want to do. <br><br><br>What does the man mean?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109151727963.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11178.mp3<br>
+<em><strong>A : He definitely does not want to climb that mountain.</strong></em><br>
+B : He went mountain-climbing last year.<br>
+C : He always wants to climb	that mountain.<br>
+D : He hasn&apos;t traveled around the world yet.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x89E3;&#x7B54;&#x672C;&#x9898;&#x7684;&#x5173;&#x952E;&#x662F;&#x7406;&#x89E3;&#x201C;the last thing&#x201D;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x5373;&#x201C;&#x6700;&#x4E0D;&#x60F3;&#x505A;&#x7684;&#x4E8B;&#x201D;&#x3002; &#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<h3 class="mume-header" id="question-11136">Question 11136</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="text-align: justify;">W: Have you found anything wrong with my stomach?<br>M: Not yet. I am still examining it. I&apos;ll let you know the result next week.</div><br>What is the probable relationship between the man and the woman?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141010102533148.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11136.mp3<br>
+A : Husband and wife.<br>
+<em><strong>B : Doctor and patient.</strong></em><br>
+C : Father and daughter.<br>
+D : Teacher and student.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7531;&#x5173;&#x952E;&#x8BCD;anything wrong with my stomach&#x548C;examining&#x53EF;&#x77E5;&#x5BF9;&#x8BDD;&#x6700;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x5728;&#x533B;&#x9662;&#x4E4B;&#x7C7B;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#x4E24;&#x4EBA;&#x53EF;&#x80FD;&#x662F;&#x533B;&#x60A3;&#x5173;&#x7CFB;&#x3002;<p></p>
+<h2 class="mume-header" id="part-2-tx22srct">Part 2 tx22srct</h2>
+
+<h3 class="mume-header" id="question-11045">Question 11045</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><p style="text-align:justify">M: Hello, I&apos;m calling because I read your ad in <i>Hand to Hand</i>. It said you were trying to sublet the one-room apartment for the next six months. Can I ask you a few questions?<br><br>
+W: Certainly.<br><br>
+M: Will the apartment be furnished?<br><br>
+W: Yes, the apartment will have a couch, a small dining table with two chairs, a couple of bookshelves and a queen-size bed.<br><br>
+M: Great. I&apos;ve just moved here and I haven&apos;t bought any furniture yet.<br><br>
+W: The facilities are very nice. Tenants have access to a small fitness room, a swimming pool and a coin-operated laundry. The landlord is excellent as well. If there are any problems at all, you can contact him and he&apos;ll take care of everything.<br><br>
+M: It sounds perfect. Can I have a look at it?<br><br>
+W: Sure. You can drop by any time.<br><br>
+M: OK. Then what shall I do to get it?<br><br>
+W: If you are interested, you need to pick up an application form, complete it, and return it to me by Friday along with a check for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25.</mn><mi>W</mi><msup><mi>e</mi><mo mathvariant="normal" lspace="0em" rspace="0em">&#x2032;</mo></msup><mi>l</mi><mi>l</mi><mi>g</mi><mi>e</mi><mi>t</mi><mi>b</mi><mi>a</mi><mi>c</mi><mi>k</mi><mi>t</mi><mi>o</mi><mi>y</mi><mi>o</mi><mi>u</mi><mi>w</mi><mi>i</mi><mi>t</mi><mi>h</mi><mi>i</mi><mi>n</mi><mi>a</mi><mi>w</mi><mi>e</mi><mi>e</mi><mi>k</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>l</mi><mi>e</mi><mi>t</mi><mi>y</mi><mi>o</mi><mi>u</mi><mi>k</mi><mi>n</mi><mi>o</mi><mi>w</mi><mi>o</mi><mi>u</mi><mi>r</mi><mi>d</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi mathvariant="normal">.</mi><mo>&lt;</mo><mi>b</mi><mi>r</mi><mi mathvariant="normal">/</mi><mo>&gt;</mo><mi>M</mi><mo>:</mo><mi>D</mi><mi>o</mi><mi>I</mi><mi>g</mi><mi>e</mi><mi>t</mi><mi>t</mi><mi>h</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">25. We&apos;ll get back to you within a week and let you know our decision.&lt;br /&gt;
+M: Do I get the</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9463em;vertical-align:-0.1944em;"></span><span class="mord">25.</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2032;</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ba</span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal">t</span><span class="mord mathnormal">oyo</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal">hina</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">ee</span><span class="mord mathnormal">kan</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">yo</span><span class="mord mathnormal">u</span><span class="mord mathnormal">kn</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">o</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">d</span><span class="mord mathnormal">ec</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord">/</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Do</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mord mathnormal">tt</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span></span></span></span>25 back if you rent the apartment to someone else?<br><br>
+W: No, the $25 fee is non-refundable. We use the money to order a copy of your credit report; we need to find out about your history of paying bills.<br><br>
+M: I just moved here from South Korea. I don&apos;t think that will work in my case.<br><br>
+W: Oh, I&apos;m sorry. I didn&apos;t realize that you were new to the USA. In that case, when you fill out the form, make sure you include three references that we can contact to find out a little bit more about you.<br><br>
+M: Will my boss and co-workers be OK?<br><br>
+W: Definitely.<br><br>
+&#xA0;</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_102/paper/201509/p_1000270/jtxsxc_13092408107.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11045.mp3<p></p>
+<p>Question&#xFF1A;What does the man want to do?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_102/paper/201509/p_1000270/bbqpsm_13092332787.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11045.mp3<br>
+A : To advertise for a large flat.<br>
+B : To apply for a job in a major newspaper.<br>
+C : To fill a vacancy in the company.<br>
+<em><strong>D : To inquire about the ad for the sublet.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7537;&#x58EB;&#x8BF4;I&apos;m calling because I read your ad in <i>Hand to Hand</i>. It said you were trying to sublet a one-room apartment for the next six months&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#x4ED6;&#x5BF9;&#x5973;&#x58EB;&#x8F6C;&#x79DF;&#x623F;&#x95F4;&#x7684;&#x5E7F;&#x544A;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x53EF;&#x89C1;&#x4ED6;&#x6253;&#x7535;&#x8BDD;&#x662F;&#x4E3A;&#x4E86;&#x8BE2;&#x95EE;&#x8F6C;&#x79DF;&#x5E7F;&#x544A;&#x7684;&#x4E8B;&#x3002;</p>
+<p>Question&#xFF1A;Which of the following is not mentioned as a facility of the apartment?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141009140221180.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11045.mp3<br>
+A : A laundry.<br>
+B : A fitness room.<br>
+C : A swimming pool.<br>
+<em><strong>D : A caf&#xE9;.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x628A;&#x63E1;&#x5973;&#x58EB;&#x5BF9;&#x8BBE;&#x65BD;&#x7684;&#x4ECB;&#x7ECD;&#x6240;&#x63D0;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x5065;&#x8EAB;&#x623F;&#x3001;&#x6E38;&#x6CF3;&#x6C60;&#x548C;&#x6295;&#x5E01;&#x5F0F;&#x6D17;&#x8863;&#x623F;&#xFF0C;&#x6CA1;&#x6709;&#x63D0;&#x5230;&#x5496;&#x5561;&#x9986;&#xFF0C;&#x6240;&#x4EE5;&#x9009;&#x62E9;A&#x3002;</p>
+<p>Question&#xFF1A;What&apos;s the $25 fee used to do?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141009140246586.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11045.mp3<br>
+<em><strong>A : To order the tenant&apos;s credit report.</strong></em><br>
+B : To order a copy of a history book.<br>
+C : To pay the bills of the facilities.<br>
+D : To purchase the furniture.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x5973;&#x58EB;&#x63D0;&#x5230;&#x7684;&#xFF1A;We use the money to order a copy of your credit report...&#x53EF;&#x89C1;25&#x7F8E;&#x5143;&#x7684;&#x8D39;&#x7528;&#x662F;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x623F;&#x5BA2;&#x7684;&#x4FE1;&#x7528;&#x62A5;&#x544A;&#x3002;</p>
+<p>Question&#xFF1A;Where does the man come from?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141009140344408.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/11045.mp3<br>
+A : China.<br>
+<em><strong>B : South Korea.</strong></em><br>
+C : Canada.<br>
+D : Japan.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7537;&#x58EB;&#x5728;&#x8C08;&#x8BDD;&#x4E2D;&#x63D0;&#x5230;&#xFF1A;I just moved here from South Korea. &#x6B64;&#x9898;&#x7B54;&#x6848;&#x663E;&#x7136;&#x662F;C&#x3002;</p>
+<h2 class="mume-header" id="part-3-qr108c4b">Part 3 qr108c4b</h2>
+
+<h3 class="mume-header" id="question-10966">Question 10966</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;&#xA0; Losing weight could be as straightforward as turning on the kitchen tap. A new study found that middle-age and older adults who drank a couple of glasses of water before each meal lost about 30 percent more weight than those who didn&apos;t.&lt;O:P&gt;&lt;/O:P&gt; <br></p><p>&#xA0; Common wisdom has long held that drinking water before meals can promote weight loss, but there were no studies proving the point. To test it, researchers at Virginia Tech in Blacksburg assigned 48 overweight men and women aged 55 to 75 to one of the two groups. Both groups consumed low-fat, low-calorie diets for 12 weeks, but one group was told to drink two 8-ounce glasses of water before breakfast, lunch and dinner.&lt;O:P&gt;&lt;/O:P&gt;</p><p>&#xA0; At the end of the 12 weeks, the water drinkers shed about 15.5 pounds, while the other group dropped about 11 pounds. Davy and her colleagues found that after a year both groups succeeded in keeping the pounds off, but those who continued to drink water before meals lost even a bit more, an average of 1.5 pounds. Why is water so effective? She says it may be because it fills the stomach with a zero-calorie fluid, so people eat less.&lt;O:P&gt;&lt;/O:P&gt;</p><p>&#xA0; Drinking water before meals may work only if you&apos;ve reached middle age. Researchers believe that in younger people, water begins to leave the stomach almost immediately. But in older people, it takes longer for the stomach to empty so they feel full for a longer time.<span style="FONT-FAMILY: &#x5B8B;&#x4F53;; FONT-SIZE: 12pt; mso-bidi-font-family: &#x5B8B;&#x4F53;; mso-font-kerning: 0pt" lang="EN-US">&lt;O:P&gt;&lt;/O:P&gt;</span></p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/2013101411071394.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/10966.mp3<p></p>
+<p>Question&#xFF1A;What&apos;s the finding of the new study mentioned in this passage?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131014110722667.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/10966.mp3<br>
+<em><strong>A : Drinking water before each meal can promote weight loss.</strong></em><br>
+B : It is harmful for the aged to drink water before each meal.<br>
+C : Losing weight is as easy as turning on the kitchen tap.<br>
+D : On average, men lose about 30% more weight than women.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7531;A new study found that middle-age and older adults who drank a couple of glasses of water before each meal lost about 30 percent more weight than those who didn&apos;t&#x53EF;&#x77E5;&#xFF0C;&#x996D;&#x524D;&#x559D;&#x6C34;&#x7684;&#x4EBA;&#x6BD4;&#x4E0D;&#x559D;&#x7684;&#x4EBA;&#x80FD;&#x591F;&#x591A;&#x51CF;30%&#x7684;&#x91CD;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;Who are the participants of the study by the researchers at Virginia Tech?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/2013101411073242.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/10966.mp3<br>
+A : 12 overweight men and women aged 55 to 75.<br>
+B : 48 overweight men and women aged 35 to 55.<br>
+<em><strong>C : 48 overweight men and women aged 55 to 75.</strong></em><br>
+D : 12 overweight men and women aged 35 to 55.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;To test it, researchers at Virginia Tech in Blacksburg assigned 48 overweight men and women aged 55 to 75 to one of the two groups&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;Why doesn&apos;t drinking water before meals work for the young people?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131014110740977.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/10966.mp3<br>
+A : Because their stomachs are filled with zero-calorie fluid.<br>
+B : Because the middle-aged consume low-fat and low-calorie diets.<br>
+<em><strong>C : Because water begins to leave their stomachs very quickly.</strong></em><br>
+D : Because they do more physical exercises than the middle-aged.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;Drinking water before meals may work only if you&apos;ve reached middle age. Researchers believe that in younger people, water begins to leave the stomach almost immediately&#xFF0C;&#x5373;&#x5BF9;&#x5E74;&#x8F7B;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x6C34;&#x4ECE;&#x4ED6;&#x4EEC;&#x7684;&#x80C3;&#x4E2D;&#x6D41;&#x5931;&#x5F97;&#x5F88;&#x5FEB;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<h3 class="mume-header" id="question-19142108">Question 19142108</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">When it comes to writing your r&#xE9;sum&#xE9;, size does matter. How long should your&#xA0;r&#xE9;sum&#xE9;&#xA0;be?&#xA0;<br><br>
+&#xA0;<br><br>
+If your r&#xE9;sum&#xE9; is too&#xA0;short, recruiters and hiring managers will think you don&#x2019;t have a lot to bring to the table. On the flip side, if your r&#xE9;sum&#xE9; is too long, readers will likely get bored or annoyed.<br><br>
+&#xA0;<br><br>
+So, what&#x2019;s the middle ground for writing your r&#xE9;sum&#xE9;? While there&#x2019;s no hard-and-fast rule, your industry and level of experience can help you determine if your r&#xE9;sum&#xE9; should be one or two pages or more pages long.<br><br>
+&#xA0;<br><br>
+The&#xA0;one-page r&#xE9;sum&#xE9;&#xA0;is ideal for entry-level workers, new college graduates, and those who have a few years of work experience. Additionally, you should consider a one-page r&#xE9;sum&#xE9; if you&#x2019;re looking to&#xA0;make a career change&#xA0;and don&#x2019;t have much experience relevant to your new goal.<br><br>
+&#xA0;<br><br>
+Hiring managers are busy people, sometimes having to sort through hundreds of applications. So, how can you make good use of your r&#xE9;sum&#xE9; real estate and really&#xA0;stand out? By&#xA0;being strategic with keywords,&#xA0;quantifying your achievements, and, most importantly, keeping it concise.<br><br>
+&#xA0;<br><br>
+That doesn&#x2019;t mean you&#xA0;have<i>&#xA0;</i>to put all of your experience on one page with tiny characters&#xA0;that you need a magnifying glass to read.&#xA0;Readability and overall presentation need to be factored in, too.&#xA0;Most r&#xE9;sum&#xE9; reviewers would rather read a well-laid-out, easy-to-skim, two-page r&#xE9;sum&#xE9; than a one-page r&#xE9;sum&#xE9; that jams too much information on the page.<br><br>
+&#xA0;<br><br>
+A two-page r&#xE9;sum&#xE9; makes sense for many job seekers, especially those who are further along in their career, with 10 or more years of relevant job experience. The extra page may be needed to convey all of the critical information an employer needs to know. Keep in mind, however, that the second page likely won&#x2019;t get as much attention as the first, so it&#x2019;s best to make sure you&#x2019;re using the&#xA0;right r&#xE9;sum&#xE9; format.<br><br>
+&#xA0;<br><br>
+Most people believe r&#xE9;sum&#xE9;s should fit on two pages max, no matter how long you&#x2019;ve been working. However, as with all rules, there are some exceptions. For example, if you work for the federal government; you&#x2019;re a senior-level manager with a long track record of accomplishments; or you&#x2019;re writing an academic r&#xE9;sum&#xE9; for a research or scientific position and have an extensive list of publications, speaking engagements, professional courses, licenses, or certifications; then you may need to extend your r&#xE9;sum&#xE9; to three or more pages.<br><br>
+&#xA0;<br><br>
+In the end, the length doesn&#x2019;t matter quite as much as the content filling the pages. If you can capture your qualifications on one page, great. But if it takes two pages or more, that&#x2019;s OK, too.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201906/p_10103253/uagbaz_19093722201.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/19142108.mp3<p></p>
+<p>Question&#xFF1A;What is the speaker mainly talking about?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201906/p_10103253/necjke_19093722203.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/19142108.mp3<br>
+A : The content of a r&#xE9;sum&#xE9;.<br>
+B : The format of a r&#xE9;sum&#xE9;.<br>
+C : The purpose of a r&#xE9;sum&#xE9;.<br>
+<em><strong>D : The length of a r&#xE9;sum&#xE9;.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x4E3B;&#x65E8;&#x9898;&#x3002;&#x97F3;&#x9891;&#x5F00;&#x5934;&#x63D0;&#x5230;&#xFF0C;&#x8BF4;&#x5230;&#x5199;&#x7B80;&#x5386;&#xFF0C;&#x7BC7;&#x5E45;&#x5F88;&#x91CD;&#x8981;&#x3002;&#x5E94;&#x8BE5;&#x5199;&#x591A;&#x957F;&#x5462;&#xFF1F;&#x4E4B;&#x540E;&#x7684;&#x8BB2;&#x8BDD;&#x90FD;&#x662F;&#x56F4;&#x7ED5;&#x7B80;&#x5386;&#x7684;&#x957F;&#x77ED;&#x5C55;&#x5F00;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What is the most important for people to make their r&#xE9;sum&#xE9;s stand out?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201906/p_10103253/bmdswp_19093722204.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/19142108.mp3<br>
+A : Using tiny characters to put all things on one page.<br>
+B : Listing the keywords on the top of the first page.<br>
+C : Elaborating on major achievements in great detail.<br>
+<em><strong>D : Keeping the content concise and well-structured.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x5982;&#x4F55;&#x4F7F;&#x81EA;&#x5DF1;&#x7684;&#x7B80;&#x5386;&#x8131;&#x9896;&#x800C;&#x51FA;&#x5462;&#xFF1F;&#x53EF;&#x4EE5;&#x6709;&#x7B56;&#x7565;&#x5730;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x8BCD;&#xFF0C;&#x91CF;&#x5316;&#x6240;&#x6709;&#x4E1A;&#x7EE9;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x4FDD;&#x6301;&#x5185;&#x5BB9;&#x7B80;&#x660E;&#x627C;&#x8981;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;Who are more likely to prepare a r&#xE9;sum&#xE9; with three or more pages?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201906/p_10103253/mhddwz_19093722204.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit3/19142108.mp3<br>
+A : Those who have over 10 years of relevant job experience.<br>
+B : Those who have done academic or scientific researches.<br>
+<em><strong>C : Those who are senior managers with many achievements.</strong></em><br>
+D : Those who want to show their professional licenses.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x9700;&#x8981;&#x5199;&#x4E09;&#x9875;&#x6216;&#x4EE5;&#x4E0A;&#x7B80;&#x5386;&#x7684;&#x4EBA;&#x5305;&#x62EC;&#xFF1A;&#x8054;&#x90A6;&#x653F;&#x5E9C;&#x7684;&#x5DE5;&#x4F5C;&#x4EBA;&#x5458;&#xFF0C;&#x53D6;&#x5F97;&#x5F88;&#x591A;&#x6210;&#x679C;&#x7684;&#x9AD8;&#x7EA7;&#x7BA1;&#x7406;&#x8005;&#xFF0C;&#x4EE5;&#x53CA;&#x7533;&#x8BF7;&#x7814;&#x7A76;&#x6216;&#x79D1;&#x5B66;&#x804C;&#x4F4D;&#x9700;&#x8981;&#x51C6;&#x5907;&#x5B66;&#x672F;&#x7B80;&#x5386;&#x5E76;&#x5217;&#x4E3E;&#x5F88;&#x591A;&#x51FA;&#x7248;&#x7269;&#x3001;&#x6F14;&#x8BB2;&#x6D3B;&#x52A8;&#x3001;&#x4E13;&#x4E1A;&#x8BFE;&#x7A0B;&#x3001;&#x6267;&#x4E1A;&#x8BB8;&#x53EF;&#x8BC1;&#x6216;&#x8D44;&#x683C;&#x8BC1;&#x4E66;&#x7684;&#x4EBA;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

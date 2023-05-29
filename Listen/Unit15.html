@@ -1,0 +1,423 @@
+<!DOCTYPE html><html><head>
+      <title>Unit15</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-15-1032033571">Unit 15 1032033571</h1>
+
+<h2 class="mume-header" id="part-1-w3fibsyr">Part 1 w3fibsyr</h2>
+
+<h3 class="mume-header" id="question-1000910444">Question 1000910444</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><p>M: Look at these charges on my credit card!</p><p>W: Yes, Daddy, I know. I had to use your credit card to buy what I needed.</p><p>M: To buy what you needed! Lisa, you have everything you need! More than you need! You charged $400 on my credit card in the month of September! I gave that card to you for emergencies only!</p><p>W: It was kind of like an emergency! New fashions were out for fall and I needed to get the new fall colors to show on my blog!</p><p>M: What&#x2019;s so important about your blog to spend $400?</p><p>W: Well Daddy, you know that fashion is global these days. When a new color or a new style begins, it goes around the world in a few days on fashion blogs! I&#x2019;m only a teenager, but over 7,000 people read my blog every week! So, I had to have the new fall colors and styles. So, you see it was an emergency!</p><p>M: Four hundred dollars&#x2019; worth of an emergency?</p><p>W: Dad! Fashion blogs like mine give information on the latest trends, colors, belts, handbags, and jewelry! Blogging isn&#x2019;t easy. I have to work hard to make sure I keep current with the latest trends.</p><p>M: Well, I have a new website and blog for you. It teaches young people how to manage their money. There is an online budget. You print the budget and fill it out. Until you have a budget &#x2013; you won&#x2019;t have another penny from me.</p><p>W: That&#x2019;s not fair! How can I go to the movies or out for coffee with friends?</p><p>M: Not my problem. You have to learn how to respect and manage your money.</p><p>W: OK, Dad. What&#x2019;s that website with the budget?</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/f51446f0-5458-43af-b86a-9716ba372643.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910444.mp3<p></p>
+<p>Question&#xFF1A;What does the man complain about?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/8be97e84-0344-433d-8e37-13822420b774.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910444.mp3<br>
+<em><strong>A : His daughter spent too much with his credit card.</strong></em><br>
+B : His daughter cared too little about making money.<br>
+C : His daughter used his credit card for an emergency.<br>
+D : His daughter knew little about what she really needed.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What has the woman done?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/047a7047-7690-4e8f-84cd-20af8341aa24.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910444.mp3<br>
+A : Looked for information on the new spring colors.<br>
+B : Spent $400 dealing with an emergency.<br>
+<em><strong>C : Posted new fashion colors and styles on her blog.</strong></em><br>
+D : Read some blogs to learn about new fashions.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What does the woman think of her blog?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/b9c8bedb-27e9-4c85-8df7-f8954d2d98db.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910444.mp3<br>
+A : It keeps her updated about her blog readers.<br>
+B : It helps her learn about new fashion trends.<br>
+<em><strong>C : It satisfies her fans to keep up with the new trends.</strong></em><br>
+D : It gives her a chance to travel around the world.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What will the woman probably do next?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/3f13563d-deb2-419e-90c4-7df430587b78.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910444.mp3<br>
+<em><strong>A : Learn to manage her money with a budget.</strong></em><br>
+B : Go to the movies or out for coffee with friends.<br>
+C : Take courses that can teach her how to budget.<br>
+D : Create a blog for her father on a new website.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<h3 class="mume-header" id="question-1000910443">Question 1000910443</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><p>W: Hey Richard, I am so excited! This is our first trip to Los Angeles, California, and I can&#x2019;t wait! Disneyland, here we come!!</p><p>M: Well, you know, of all the Disneyland parks in the world, I have been to every one of them, except for the original one, the Disneyland here in southern California, which was built in 1955.</p><p>W: I know! But, what is it about Disneyland that makes you so happy?</p><p>M: Well, Mickey Mouse, of course! And, I guess &#x2026; hmmm, you know, I think it&#x2019;s because Disneyland helps me feel like a kid again with a simple, joyful experience!</p><p>W: Well, I am really glad to be going to Disneyland with my favorite brother, then! But, hey! Let&#x2019;s be sure to see some other things in southern California too!</p><p>M: Sure! What do you want to see?</p><p>W: Well, I want to go see the HOLLYWOOD Sign and walk down the beach at the Pacific Ocean. Most of all, I want to go and walk down to the street where there are many fancy shops. I love all those shops and want to look for movie stars who are shopping there!</p><p>M: Wait! Wait! And, what about the old historic movie theaters where they always have the world movie premieres? Those theaters are amazing to see &#x2013; and they have a lot of history, too! Like the Los Angeles Theatre. It is very famous. It was built in 1931 and has been showing movies ever since!</p><p>W: And another theater we must see here in Los Angeles is a Chinese-style theatre which was built in 1926 and where you can see all of the movie stars&#x2019; hand prints and foot prints!</p><p>M: Yeah, I think I know which one you are talking about. It was also the theatre that had the first showing of a very famous science-fiction movie in the 1970s, and it is called &#x2026;</p><p>W: &#x2026; <i>Star Wars</i>!</p><p>M: Yes, exactly, <i>Star Wars</i>, first shown in 1977.</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/t_103/201510/lhlvae_27165525474.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910443.mp3<p></p>
+<p>Question&#xFF1A;What are the two speakers doing?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/t_103/201510/txacwa_27165525474.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910443.mp3<br>
+A : Walking around to look for Disneyland.<br>
+B : Discussing the history of Disneyland.<br>
+<em><strong>C : Touring southern California.</strong></em><br>
+D : Planning their trip to Disneyland.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;Why does the man like Disneyland?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/t_103/201510/drrfip_27165525474.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910443.mp3<br>
+<em><strong>A : It makes him feel young again.</strong></em><br>
+B : He loves playing with children there.<br>
+C : It is the oldest park in California.<br>
+D : He is interested in Mickey Mouse.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What would the woman like to do most?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/t_103/201510/rqlfte_27165525474.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910443.mp3<br>
+A : To have a walk along the Pacific beach.<br>
+<em><strong>B : To wander about at some fancy stores.</strong></em><br>
+C : To meet some movie stars at a theater.<br>
+D : To watch a movie at a historic theater.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;Where will the two speakers probably go?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/t_103/201510/jerxkv_27165525474.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910443.mp3<br>
+A : To a shop selling movie stars&#x2019; hand prints.<br>
+<em><strong>B : To some old well-known movie theatres.</strong></em><br>
+C : To a beautiful theatre built in the 1970s.<br>
+D : To the first showing of a science-fiction movie.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<h2 class="mume-header" id="part-2-6uv45paz">Part 2 6uv45paz</h2>
+
+<h3 class="mume-header" id="question-1000910402">Question 1000910402</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">Chinese real estate is projected to jump about 30% next year according to many forecasts. However the government may try to prevent a housing bubble in China by tightening credit markets. Some experts claim that the rebound in the Chinese property market is sustainable and could see real estate investment increase by 30% next year. According to a leading economist who advises the central bank, the real estate recovery will become a driving force in the economic recovery. &#x201C;China&apos;s property industry can not only create great wealth but also form an important basis for sustainable economic growth,&#x201D; he told a forum in south China. However, some other economists doubt whether the property revival can be sustained. They see price bubbles forming in some markets, inflated by a lending craze in the first half of the year. Still other economists believe that on the one hand property prices will most likely continue to rise in coming months, mainly because of tight money supply; on the other hand, the growth will slow when new housing units are released. One analyst said, &#x201C;We believe a new supply will begin to increase again in September, which means the price increase will likely slow in the fourth quarter.&#x201D; In spite of the controversy among economists, many prospective home buyers have become cautious and hesitated about buying homes amid concerns that the government may tighten credit in the real estate market and slow price growth in some cities. On the other hand, property developers are building more. The latest figures show that the housing units built by China&apos;s biggest developer Vanke has increased 45% this year.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1020/c_4/u_9/201511/u9-5-2.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910402.mp3<p></p>
+<p>Question&#xFF1A;None<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="None"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910402.mp3<br>
+A : It will decline.<br>
+B : It will go up.<br>
+<em><strong>C : Opinions about it are divided.</strong></em><br>
+D : It will go up and then decline.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;None<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="None"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910402.mp3<br>
+A : They see price fluctuations.<br>
+B : They see price declines.<br>
+C : They see stable prices.<br>
+<em><strong>D : They see price bubbles.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;None<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="None"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/1000910402.mp3<br>
+<em><strong>A : They worry that the government may tighten credit.</strong></em><br>
+B : They want to save more money.<br>
+C : They worry that the government may collect property taxes.<br>
+D : They want to buy better homes.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<h3 class="mume-header" id="question-19154958">Question 19154958</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">In last week&#x2019;s lecture, we discussed the characteristics of the newly born offspring of several mammals. You probably remember that human infants are less developed physically than other mammals of the same age. But in today&#x2019;s lecture, we&#x2019;ll look at three very interesting studies that hint at the surprising abilities of human babies.<br><br>
+&#xA0;<br><br>
+In the first study, three-year-olds watched two videos shown side by side, each featuring a different researcher, one of whom they&#x2019;d met once two years earlier. The children spent longer watching the video showing the researcher they hadn&#x2019;t met. This is consistent with young children&#x2019;s usual tendency to look longer at things that aren&#x2019;t familiar. And really, this is amazing. It suggests the children remember the researcher they&#x2019;ve met just one time when they were only one-year-olds. Of course, as most of us forget memories from our first few years as we grow older, these early long-term memories will likely be lost in subsequent years.<br><br>
+&#xA0;<br><br>
+Our second study is about music. For this study, researchers played music to babies through speakers located on either side of a human face. They waited until the babies got bored and averted their gaze from the face. And then they changed the mood of the music, either from sad to happy or the other way around. This mood switch made no difference to the three-month-olds; but for the nine-month-olds, it was enough to renew their interest and they started looking again in the direction of the face. This suggests that babies of that age can tell the difference between a happy melody and a sad tune.<br><br>
+&#xA0;<br><br>
+Our final study is from 1980, but it&#x2019;s still relevant today. In fact, it&#x2019;s one of the most famous pieces of research about infant emotion ever published. The study involved ordinary adults watching video clips of babies (nine months or younger). In the video clips, the babies made various facial expressions in response to real-life events, including playful interactions and painful ones. The adult observers were able to reliably discern an assortment of emotions on the babies&#x2019; faces. These emotions included interest, joy, surprise, sadness, anger, disgust, contempt and fear.<br><br>
+&#xA0;<br><br>
+Next week, we&#x2019;ll be looking at this last study more closely. In fact, we will be viewing some of the video clips from that study, and together, see how well we do in discerning the babies&#x2019; emotions.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/xykkdy_27160545014.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/19154958.mp3<p></p>
+<p>Question&#xFF1A;What are the three interesting studies about?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/nzqwrn_27160545016.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/19154958.mp3<br>
+A : Adults&#x2019; influence on children.<br>
+B : Cognitive features of different newly born mammals.<br>
+<em><strong>C : Abilities of human babies.</strong></em><br>
+D : Similarities between human babies and baby animals.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x5F00;&#x5934;&#x63D0;&#x5230;&#xFF0C;&#x4ECA;&#x5929;&#x7684;&#x8BB2;&#x5EA7;&#x5C06;&#x63D0;&#x5230;&#x4E09;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x7814;&#x7A76;&#xFF0C;&#x8FD9;&#x4E9B;&#x7814;&#x7A76;&#x6697;&#x793A;&#x4E86;&#x4EBA;&#x7C7B;&#x5A74;&#x513F;&#x7684;&#x60CA;&#x4EBA;&#x80FD;&#x529B;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What does the second study find about nine-month-old babies?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/sucbxo_27160545017.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/19154958.mp3<br>
+A : They love happy melodies more than sad ones.<br>
+<em><strong>B : They can distinguish a happy tune from a sad one.</strong></em><br>
+C : They are already sensitive to beats and rhythms.<br>
+D : They fall asleep easily while listening to music.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x97F3;&#x4E50;&#x7684;&#x57FA;&#x8C03;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x5BF9;&#x4E09;&#x4E2A;&#x6708;&#x5927;&#x7684;&#x5A74;&#x513F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x5F71;&#x54CD;&#xFF1B;&#x4F46;&#x662F;&#x80FD;&#x591F;&#x91CD;&#x65B0;&#x6FC0;&#x53D1;&#x4E5D;&#x4E2A;&#x6708;&#x5927;&#x7684;&#x5A74;&#x513F;&#x7684;&#x5174;&#x8DA3;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F1A;&#x91CD;&#x65B0;&#x5F80;&#x4EBA;&#x8138;&#x7684;&#x65B9;&#x5411;&#x770B;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4E5D;&#x4E2A;&#x6708;&#x5927;&#x7684;&#x5A74;&#x513F;&#x80FD;&#x591F;&#x5206;&#x8FA8;&#x5FEB;&#x4E50;&#x548C;&#x60B2;&#x4F24;&#x7684;&#x66F2;&#x8C03;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;What is the 1980 study about?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/qhifuf_27160545017.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit15/19154958.mp3<br>
+A : Babies&#x2019; interaction with adults.<br>
+B : Infants&#x2019; behaviors.<br>
+C : Infants&#x2019; facial expressions.<br>
+<em><strong>D : Babies&#x2019; emotions.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;1980&#x5E74;&#x7684;&#x7814;&#x7A76;&#x662F;&#x8FC4;&#x4ECA;&#x4E3A;&#x6B62;&#x53D1;&#x8868;&#x7684;&#x5173;&#x4E8E;&#x5A74;&#x513F;&#x60C5;&#x7EEA;&#x6700;&#x8457;&#x540D;&#x7684;&#x7814;&#x7A76;&#x4E4B;&#x4E00;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

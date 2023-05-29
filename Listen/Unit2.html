@@ -1,0 +1,452 @@
+<!DOCTYPE html><html><head>
+      <title>Unit2</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-2-1031473753">Unit 2 1031473753</h1>
+
+<h2 class="mume-header" id="part-1-8956d4kn">Part 1 8956d4kn</h2>
+
+<h3 class="mume-header" id="question-11202">Question 11202</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="TEXT-ALIGN: justify">W: How was the job interview? I think you&apos;ll make a good journalist. I remember you as the best writer of the class. <br>M: Well, in fact, my application was turned down. They were looking for people with experience in the profession.<br>&#xA0;</div><br>Why didn&apos;t the man get the job?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109145311105.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11202.mp3<br>
+A : He didn&apos;t perform well in the interview.<br>
+B : He doesn&apos;t write well enough<br>
+<em><strong>C : He hasn&apos;t got any professional experience.</strong></em><br>
+D : He is not a professional writer.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;&#x97F3;&#x9891;&#xFF0C;&#x62DB;&#x8058;&#x65B9;&#x8981;&#x5BFB;&#x627E;&#x7684;&#x662F;&#x5728;&#x8FD9;&#x4E00;&#x884C;&#x6709;&#x5DE5;&#x4F5C;&#x7ECF;&#x9A8C;&#x7684;&#x4EBA;&#x3002;&#x6240;&#x4EE5;&#x9009;C&#x3002;<p></p>
+<h3 class="mume-header" id="question-11200">Question 11200</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="TEXT-ALIGN: justify">M: When will you be going on holiday with me? <br>W: I&apos;m not sure. I won&apos;t be able to go now because I just started a new job. I won&apos;t get free until my training period is over, which will be at least two months.<br>&#xA0;</div><br>Why can&apos;t the woman go on holiday with the man?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109145131699.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11200.mp3<br>
+A : She doesn&apos;t want to go on holiday with the man.<br>
+B : She is having some trouble now.<br>
+<em><strong>C : She is still under training for her new job.</strong></em><br>
+D : She is not sure if her boss would allow her to go.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x63D0;&#x5230;&#x73B0;&#x5728;&#x4E0D;&#x80FD;&#x53BB;&#x5EA6;&#x5047;&#x7684;&#x539F;&#x56E0;&#x662F;&#x5979;&#x521A;&#x5F00;&#x59CB;&#x65B0;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x4E24;&#x4E2A;&#x6708;&#x7684;&#x57F9;&#x8BAD;&#x671F;&#x3002;&#x6240;&#x4EE5;&#x9009;A&#x3002;<p></p>
+<h3 class="mume-header" id="question-10008847">Question 10008847</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="text-align:justify">W: I was talking to Mary the other day and she&#xA0;mentioned that your new consulting firm is doing&#xA0;really well.<br><br>
+M: Yes, business picked up much faster than we anticipated.&#xA0;We now have over 200 clients.<br><br>
+What do we learn about the man from the&#xA0;conversation?</div><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201603/p_10000434/boonbu_17145033261.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/10008847.mp3<br>
+A : He took over the firm from Mary.<br>
+<em><strong>B : He is running a successful business.</strong></em><br>
+C : He failed to foresee major problems.<br>
+D : He is opening a new consulting firm.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x8BF4;&#x5979;&#x542C;&#x8BF4;&#x7537;&#x58EB;&#x7684;&#x54A8;&#x8BE2;&#x516C;&#x53F8;&#x505A;&#x5F97;&#x5F88;&#x597D;&#xFF0C;&#x7537;&#x58EB;&#x5BF9;&#x6B64;&#x4E88;&#x4EE5;&#x80AF;&#x5B9A;&#xFF0C;&#x5E76;&#x8BF4;&#x4E1A;&#x52A1;&#x8FDB;&#x5C55;&#x6BD4;&#x9884;&#x671F;&#x8981;&#x5FEB;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x7537;&#x58EB;&#x7ECF;&#x8425;&#x7740;&#x4E00;&#x5BB6;&#x6210;&#x529F;&#x7684;&#x4F01;&#x4E1A;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;<p></p>
+<h3 class="mume-header" id="question-10008761">Question 10008761</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="text-align:justify">W: We&#x2019;re new in East Asia, so we have to be careful in&#xA0;choosing the location for our regional office.<br><br>
+M: Well, Tokyo and Singapore are both attractive, but&#xA0;the living expenses there are incredibly high.<br><br>
+What are the speakers discussing?</div><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201603/p_10000433/rlzigh_16152220387.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/10008761.mp3<br>
+A : Their expansion into the overseas market.<br>
+B : The challenges facing East Asia.<br>
+<em><strong>C : The location for their new office.</strong></em><br>
+D : The living expenses in Tokyo and Singapore.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x5973;&#x58EB;&#x8BF4;&#x4ED6;&#x4EEC;&#x5728;&#x4E1C;&#x4E9A;&#x662F;&#x521D;&#x6765;&#x4E4D;&#x5230;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x8C28;&#x614E;&#x9009;&#x62E9;&#x533A;&#x57DF;&#x529E;&#x4E8B;&#x5904;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x7537;&#x58EB;&#x8BF4;&#x4E1C;&#x4EAC;&#x548C;&#x65B0;&#x52A0;&#x5761;&#x5F88;&#x6709;&#x5438;&#x5F15;&#x529B;&#xFF0C;&#x4F46;&#x662F;&#x751F;&#x6D3B;&#x8D39;&#x7528;&#x592A;&#x9AD8;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x5BF9;&#x8BDD;&#x8005;&#x5728;&#x8C08;&#x8BBA;&#x529E;&#x4E8B;&#x5904;&#x7684;&#x9009;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;<p></p>
+<h3 class="mume-header" id="question-11101">Question 11101</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="TEXT-ALIGN: justify">M: I was sorry to hear about Bill&apos;s being fired. I know he was sick a lot and that he usually got to work late. <br>W: Oh, it wasn&apos;t that. Bill made a big error in last month&apos;s accounting. Even though it wasn&apos;t his fault, his boss was very angry.<br><br>&#xA0;</div><br>Why did Bill lose his job?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150114134957782.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11101.mp3<br>
+A : He always got to work late.<br>
+B : He got angry with his boss.<br>
+<em><strong>C : He made a major error at work.</strong></em><br>
+D : He was frequently sick and absent from work.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x63D0;&#x5230;&#x6BD4;&#x5C14;&#x88AB;&#x5F00;&#x9664;&#x7684;&#x771F;&#x6B63;&#x539F;&#x56E0;&#x662F;&#x4ED6;&#x4E0A;&#x6708;&#x7684;&#x8D26;&#x76EE;&#x6E05;&#x7B97;&#x51FA;&#x73B0;&#x4E86;&#x9519;&#x8BEF;&#x3002;<p></p>
+<h3 class="mume-header" id="question-10940">Question 10940</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;W: Hello, Mr. Johnson, I have&#xA0;some personal issues to deal with, so I was wondering if I could have one week off.&#xA0;&lt;O:P&gt;&lt;/O:P&gt; </p><p>M: You know this is the busiest season of the year for our hotel, but I can offer you three days. If you are still dissatisfied, you can clear out your desk.<span style="FONT-FAMILY: &#x5B8B;&#x4F53;; FONT-SIZE: 12pt; mso-font-kerning: 0pt; mso-bidi-font-family: &#x5B8B;&#x4F53;" lang="EN-US">&lt;O:P&gt;&lt;/O:P&gt;</span></p><br>What is the attitude of the man towards the woman&apos;s request?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131014153831113.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/10940.mp3<br>
+A : Indifferent.<br>
+B : Positive.<br>
+<em><strong>C : Partly approved.</strong></em><br>
+D : Negative.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x63D0;&#x5230;&#x60F3;&#x8BF7;&#x4E00;&#x4E2A;&#x661F;&#x671F;&#x5047;&#xFF0C;&#x7537;&#x58EB;&#x7ED9;&#x4E86;&#x4E09;&#x5929;&#x7684;&#x5047;&#xFF0C;&#x8FD8;&#x5A01;&#x80C1;&#x5982;&#x679C;&#x4E0D;&#x540C;&#x610F;&#xFF0C;&#x5C31;&#x8BA9;&#x5973;&#x58EB;&#x6536;&#x62FE;&#x597D;&#x684C;&#x5B50;&#xFF0C;&#x6697;&#x793A;&#x8981;&#x8F9E;&#x9000;&#x5979;&#xFF0C;&#x53EA;&#x662F;&#x90E8;&#x5206;&#x540C;&#x610F;&#x4E86;&#x5979;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;<p></p>
+<h2 class="mume-header" id="part-2-tx22srct">Part 2 tx22srct</h2>
+
+<h3 class="mume-header" id="question-11205">Question 11205</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="TEXT-ALIGN: justify">W: Hey, Joe. What&apos;s all this talk about a benefit walkathon this weekend?<br>M: Don&apos;t you know? Most of the residents in Parker Hall are going to try to walk the seven miles from the Engineering Library, across campus, and down to City Hall in an effort to raise money for the new children&apos;s hospital. <br>W: Sounds like a good idea! But I don&apos;t understand where the money comes from. <br>M: Well, a few days before the walkathon, each participant goes around asking people to pledge a certain amount of money for each mile that he or she expects to walk in the event. Then after the walkathon is over, the participants go back to those same people, collect the money pledged, and send it to the hospital. <br>W: So you mean if you pledge, say, a dollar a mile and you walk five miles, then you get five dollars.<br>M: That&apos;s right. Of course most of my friends aren&apos;t such big spenders. The biggest pledge I&apos;ve gotten so far is 25 cents a mile. <br>W: And how many people have made pledges for you? <br>M: Eleven so far. Say, how about making it a dozen? <br>W: Sure. If you&apos;ll do the same for me. The walkathon sounds like the perfect opportunity for me to break in my new pair of sports shoes.<br>&#xA0;</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109150021492.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11205.mp3<p></p>
+<p>Question&#xFF1A;Who is going to participate in the walkathon?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109150048202.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11205.mp3<br>
+A : Hospital employees.<br>
+<em><strong>B : Parker Hall residents.</strong></em><br>
+C : City Hall officials.<br>
+D : The engineering students.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x6E05;&#x695A;&#x5730;&#x63D0;&#x5230;&#x4E86;&#x53C2;&#x4E0E;&#x8005;&#x662F;Most of the residents in Parker Hall&#x3002;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What is known about the course of the walkathon?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109150120772.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11205.mp3<br>
+A : It takes a few days to cover.<br>
+B : It&apos;s five miles long.<br>
+<em><strong>C : It begins on campus.</strong></em><br>
+D : It circles the campus.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#x6B65;&#x884C;&#x9A6C;&#x62C9;&#x677E;&#x7684;&#x8DEF;&#x7EBF;&#x59CB;&#x4E8E;&#x6821;&#x56ED;&#x5185;&#x7684;&#x5DE5;&#x7A0B;&#x6280;&#x672F;&#x56FE;&#x4E66;&#x9986;&#xFF0C;&#x6B62;&#x4E8E;&#x5E02;&#x653F;&#x5385;&#x3002;&#x5168;&#x7A0B;7&#x82F1;&#x91CC;&#x3002;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;How is money raised in the walkathon?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109150157873.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11205.mp3<br>
+A : Collected from participants.<br>
+B : Raised from City Hall officials based on the miles participants covered.<br>
+<em><strong>C : Contributed by people pledged to make donations based on the miles participants covered.</strong></em><br>
+D : Allocated by local hospitals.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#x89C2;&#x4F17;&#x6839;&#x636E;&#x53C2;&#x4E0E;&#x8005;&#x6240;&#x8D70;&#x7684;&#x82F1;&#x91CC;&#x6570;&#x6765;&#x6350;&#x8D60;&#x4E00;&#x5B9A;&#x6570;&#x76EE;&#x7684;&#x94B1;&#x3002;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;How much money has each of Joe&apos;s friends pledged to him?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109150227770.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11205.mp3<br>
+A : One dollar per mile.<br>
+<em><strong>B : Twenty-five cents or less per mile.</strong></em><br>
+C : Eleven dollars for the event.<br>
+D : Five dollars for the event.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;&#x97F3;&#x9891;&#xFF0C;Joe&#x63D0;&#x5230;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x4ED6;&#x5F97;&#x5230;&#x7684;&#x6700;&#x9AD8;&#x6570;&#x76EE;&#x7684;&#x6350;&#x8D60;&#x662F;&#x6BCF;&#x82F1;&#x91CC;25&#x7F8E;&#x5206;&#x3002;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<h2 class="mume-header" id="part-3-qr108c4b">Part 3 qr108c4b</h2>
+
+<h3 class="mume-header" id="question-11126">Question 11126</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align: justify;">&#xA0; &#xA0; Hello, I am Harriet Smith. As the editor of <em>The Voice</em>, I&apos;d like to introduce you to our <em>Campus Daily</em>. We need volunteers to assist us in keeping our student body informed through our newspaper.<br>&#xA0; &#xA0; Experiences are absolutely necessary, and writing and typing skills are also important. We need people to rewrite articles, to type and to proofread. We&apos;d also need a good photographer. Although many of our staff members are journalism majors, we also have several engineers and pre-law students working for us. Since <em>The Voice</em> comes out five days a week, we need excellent students who know how to budget their time efficiently.<br>&#xA0; &#xA0; Good grades are a prerequisite for working on the paper. There is some money for salaries, depending on how involved you get with the paper, but don&apos;t expect to get rich. This isn&apos;t something for the money. Mostly it&apos;s just for fun.<br>&#xA0; &#xA0; Anyone who is interested in joining the staff should speak to me immediately after the meeting. Be prepared to start right away. The first issue goes to press tomorrow.<br>&#xA0;</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150114104555818.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11126.mp3<p></p>
+<p>Question&#xFF1A;Who is Smith speaking to?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150114104628177.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11126.mp3<br>
+<em><strong>A : A group of students.</strong></em><br>
+B : Engineers.<br>
+C : Pre-law students.<br>
+D : The faculty.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6574;&#x7BC7;&#x6587;&#x7AE0;&#x542C;&#x4E0B;&#x6765;&#x53EF;&#x4EE5;&#x63A8;&#x65AD;&#x53F2;&#x5BC6;&#x65AF;&#x7684;&#x8BB2;&#x8BDD;&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x7FA4;&#x5B66;&#x751F;&#x3002;</p>
+<p>Question&#xFF1A;What is likely the most important qualification expected of the volunteers?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150114104644234.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11126.mp3<br>
+A : Typing skills.<br>
+<em><strong>B : Experience in journalism.</strong></em><br>
+C : Being a qualified student.<br>
+D : Lots of money.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x4ECE;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#x7684;experiences are absolutely necessary&#x53EF;&#x4EE5;&#x63A8;&#x65AD;&#xFF0C;&#x6709;&#x8DB3;&#x591F;&#x7ECF;&#x9A8C;&#x662F;&#x6700;&#x91CD;&#x8981;&#x7684;&#x3002;</p>
+<p>Question&#xFF1A;When are the volunteers expected to begin working?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150114104702450.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/11126.mp3<br>
+A : In a couple of days.<br>
+B : Two days later.<br>
+C : Tomorrow.<br>
+<em><strong>D : Immediately after the meeting.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x6700;&#x540E;&#x8BB2;&#x5230;&#x4E86;&#x8981;&#x51C6;&#x5907;&#x597D;&#x7ACB;&#x523B;&#x6295;&#x5165;&#x5DE5;&#x4F5C;&#xFF0C;&#x62A5;&#x7EB8;&#x7684;&#x7B2C;&#x4E00;&#x671F;&#x660E;&#x5929;&#x5C31;&#x8981;&#x51FA;&#x7248;&#x3002;</p>
+<h3 class="mume-header" id="question-19141469">Question 19141469</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align: justify;">Today I&#x2019;m going to talk about a very special kind of person. Psychologists call them &#x201C;masters of deception&#x201D;. Those rare individuals with a natural ability to tell with complete confidence when someone is telling a lie. For decades, researchers and law enforcement agencies have tried to build a machine that will do the same thing.<br><br>
+&#xA0;<br><br>
+Now, a company in Massachusetts says that by using magnetic brain scans, they can determine with 97% accuracy whether someone is telling the truth. They hope that the technology will be cleared for use in American courts by early next year. But is this really the ultimate tool for you, the lawyers of tomorrow? You will not find many brain scientists celebrating this breakthrough. The company might be very optimistic, but the ability of their machine to detect deception has not provided credible proof. That&#x2019;s because the technology has not been properly tested in real-world situations. In life, there are different kinds of lies and diverse contexts in which they&#x2019;re told. These differences may elicit different brain responses. Does their hypothesis behind the test apply in every case? We don&#x2019;t know the answer, because studies done on how reliable this machine is have not yet been duplicated. Much more research is badly needed.<br><br>
+&#xA0;<br><br>
+Whether the technology is eventually deemed reliable enough for the courts will ultimately be decided by the judges. Let&#x2019;s hope they&#x2019;re wise enough not to be fooled by a machine that claims to determine truthfulness at the flick of a switch. They should also be sceptical of the growing tendency to try to reduce all human traits and actions to the level of brain activity. Often, they do not map that easily.<br><br>
+&#xA0;<br><br>
+Moreover, understanding the brain is not the same as understanding the mind. Some researchers have suggested that thoughts cannot properly be seen as purely internal. Instead, thoughts make sense only in reference to the individual&#x2019;s external world. So while there may be insights to be gained from matching behavior to brain activity, those insights will not necessarily lead to justice in a court of law. Problems surround the use of machines to spot deception, at least until it has been rigorously tested.<br><br>
+&#xA0;<br><br>
+A high-tech test that can tell when a person is not telling the truth sounds too good to be true. And when something sounds too good to be true, it usually is.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201905/p_10103150/zconmr_07093208642.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/19141469.mp3<p></p>
+<p>Question&#xFF1A;What have researchers and law enforcement agencies tried to do?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201905/p_10103150/gefieo_07093208644.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/19141469.mp3<br>
+<em><strong>A : Build a machine that can detect lies.</strong></em><br>
+B : Win people&#x2019;s complete trust in them.<br>
+C : Develop a magnetic brain scanner.<br>
+D : Test the credibility of court evidence.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x5F00;&#x5934;&#x63D0;&#x5230;&#xFF0C;&#x6709;&#x4E9B;&#x4EBA;&#x5929;&#x751F;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x8C0E;&#x8A00;&#xFF0C;&#x51E0;&#x5341;&#x5E74;&#x6765;&#xFF0C;&#x7814;&#x7A76;&#x4EBA;&#x5458;&#x548C;&#x6267;&#x6CD5;&#x90E8;&#x95E8;&#x4E00;&#x76F4;&#x5C1D;&#x8BD5;&#x7814;&#x53D1;&#x4E00;&#x79CD;&#x4E5F;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x8C0E;&#x8A00;&#x7684;&#x673A;&#x5668;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;How do many brain scientists respond to the Massachusetts company&#x2019;s so-called technological breakthrough?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201905/p_10103150/sfduhq_07093208645.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/19141469.mp3<br>
+A : They are optimistic about its potential.<br>
+B : They think it is but business promotion.<br>
+C : They celebrate it with great enthusiasm.<br>
+<em><strong>D : They are sceptical of its reliability.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x9A6C;&#x8428;&#x8BF8;&#x585E;&#x5DDE;&#x4E00;&#x5BB6;&#x516C;&#x53F8;&#x79F0;&#xFF0C;&#x901A;&#x8FC7;&#x5BF9;&#x5927;&#x8111;&#x8FDB;&#x884C;&#x78C1;&#x5171;&#x632F;&#x626B;&#x63CF;&#xFF0C;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x8C0E;&#x8A00;&#xFF0C;&#x51C6;&#x786E;&#x7387;&#x9AD8;&#x8FBE;97%&#x3002;&#x4F46;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E00;&#x7A81;&#x7834;&#xFF0C;&#x8BB8;&#x591A;&#x5927;&#x8111;&#x79D1;&#x5B66;&#x5BB6;&#x5E76;&#x4E0D;&#x8868;&#x793A;&#x795D;&#x8D3A;&#x3002;&#x5C3D;&#x7BA1;&#x8BE5;&#x516C;&#x53F8;&#x975E;&#x5E38;&#x4E50;&#x89C2;&#xFF0C;&#x4F46;&#x5E76;&#x6CA1;&#x6709;&#x53EF;&#x9760;&#x7684;&#x8BC1;&#x636E;&#x6765;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x673A;&#x5668;&#x7684;&#x6D4B;&#x8C0E;&#x80FD;&#x529B;&#x3002;&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;What does the speaker think of using a high-tech test to determine whether a person is telling the truth?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201905/p_10103150/tkshiw_07093208646.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit2/19141469.mp3<br>
+A : It may intrude into people&#x2019;s privacy.<br>
+B : It does not sound economical.<br>
+<em><strong>C : It is not to be trusted at all.</strong></em><br>
+D : It may lead to overuse in court trials.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x63A8;&#x65AD;&#x9898;&#x3002;&#x97F3;&#x9891;&#x7ED3;&#x5C3E;&#x5904;&#x63D0;&#x5230;&#xFF0C;&#x9AD8;&#x79D1;&#x6280;&#x6D4B;&#x8C0E;&#x673A;&#x5668;&#x542C;&#x8D77;&#x6765;&#x592A;&#x68D2;&#x4E86;&#xFF0C;&#x4EE5;&#x81F3;&#x4E8E;&#x4EE4;&#x4EBA;&#x8D77;&#x7591;&#x3002;&#x800C;&#x5F53;&#x4E00;&#x4EF6;&#x4E8B;&#x7269;&#x7F8E;&#x597D;&#x5230;&#x4EE4;&#x4EBA;&#x96BE;&#x4EE5;&#x7F6E;&#x4FE1;&#x65F6;&#xFF0C;&#x5B83;&#x901A;&#x5E38;&#x662F;&#x4E0D;&#x53EF;&#x9760;&#x7684;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x8BB2;&#x8BDD;&#x8005;&#x8BA4;&#x4E3A;&#x7528;&#x9AD8;&#x79D1;&#x6280;&#x4EA7;&#x54C1;&#x6D4B;&#x8C0E;&#x4E0D;&#x53EF;&#x9760;&#x3002;&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x9009;A&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

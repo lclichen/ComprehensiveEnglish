@@ -1,0 +1,448 @@
+<!DOCTYPE html><html><head>
+      <title>Unit4</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-4-1031485174">Unit 4 1031485174</h1>
+
+<h2 class="mume-header" id="part-1-8956d4kn">Part 1 8956d4kn</h2>
+
+<h3 class="mume-header" id="question-11063">Question 11063</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p style="TEXT-ALIGN: justify">W: I just found out the registration of the calligraphy class is full. Now I have to wait another whole year to get in.<br>M: Why don&apos;t you check&#xA0;back&#xA0;after the first week? Somebody might quit.</p><br>What does the man suggest the woman do?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141010095741117.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11063.mp3<br>
+A : Take the course next year.<br>
+B : Make sure the registration office doesn&apos;t make a mistake.<br>
+C : Decide whether to drop the course next week.<br>
+<em><strong>D : Register the class if a place will be available later.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;&#x97F3;&#x9891;&#xFF0C;&#x7537;&#x58EB;&#x5EFA;&#x8BAE;&#x5973;&#x58EB;&#x7B2C;&#x4E00;&#x5468;&#x540E;&#x518D;&#x67E5;&#x9605;&#x4E00;&#x4E0B;&#xFF0C;&#x4E5F;&#x8BB8;&#x6709;&#x4EBA;&#x9000;&#x51FA;&#x3002;&#x5373;&#x5982;&#x679C;&#x6709;&#x540D;&#x989D;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x62A5;&#x540D;&#x4E66;&#x6CD5;&#x8BFE;&#x3002;&#x6240;&#x4EE5;&#x9009;C&#x3002;<p></p>
+<h3 class="mume-header" id="question-11062">Question 11062</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p>M: You really seem to enjoy your literature class.<br>W: I sure do. It opens new worlds for me. I&apos;m exposed to the thoughts of some of the world&apos;s&#xA0;best writers. I&apos;ve never read so much in my life!</p><br>Why is she so excited?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/2014101009523785.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11062.mp3<br>
+A : Because she is going to earn more money.<br>
+B : Because she is writing a book.<br>
+C : Because she has met some interesting students.<br>
+<em><strong>D : Because she is enjoying reading literature books.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x4ECE;&#x5973;&#x58EB;&#x7684;&#x8BED;&#x6C14;&#x6211;&#x4EEC;&#x5F97;&#x77E5;&#x5979;&#x5F88;&#x5174;&#x594B;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x4E0A;&#x6587;&#x5B66;&#x8BFE;&#x7ED9;&#x5979;&#x6253;&#x5F00;&#x4E86;&#x65B0;&#x5929;&#x5730;&#xFF0C;&#x8BA9;&#x5979;&#x63A5;&#x89E6;&#x5230;&#x4E16;&#x754C;&#x77E5;&#x540D;&#x4F5C;&#x5BB6;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x6700;&#x540E;&#x5979;&#x8BF4;&#x4ECE;&#x6CA1;&#x8BFB;&#x8FC7;&#x8FD9;&#x4E48;&#x591A;&#x4E66;&#x3002;&#x7531;&#x6B64;&#x63A8;&#x65AD;&#xFF0C;&#x5979;&#x5F88;&#x559C;&#x6B22;&#x8BFB;&#x6587;&#x5B66;&#x4E66;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;<p></p>
+<h3 class="mume-header" id="question-11037">Question 11037</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;M: Our English teacher has been very busy since last month. He never stops working until 12:00 at night.<br>W: Had I known that, I would never have troubled him so much.<br><br>What can we learn from the conversation?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141009125859398.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11037.mp3<br>
+A : The woman has never troubled the English teacher.<br>
+B : The English teacher has not been busy.<br>
+C : The man has troubled the English teacher very much.<br>
+<em><strong>D : The woman has troubled the English teacher very much.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;Had I known that&#x662F;&#x4E0E;&#x8FC7;&#x53BB;&#x4E8B;&#x5B9E;&#x76F8;&#x53CD;&#x7684;&#x865A;&#x62DF;&#x8BED;&#x6C14;&#xFF0C;&#x53E6;&#x5916;would never have done&#x8868;&#x793A;&#x4E0D;&#x8BE5;&#x505A;&#x67D0;&#x4E8B;&#x800C;&#x5B9E;&#x9645;&#x4E0A;&#x505A;&#x4E86;&#x3002;&#x7531;&#x5973;&#x58EB;&#x6240;&#x8BF4;&#x7684;Had I known that, I would never have troubled him so much&#x53EF;&#x77E5;&#x5979;&#x5DF2;&#x7ECF;&#x9EBB;&#x70E6;&#x8FC7;&#x8001;&#x5E08;&#x4E86;&#x3002;</p>
+<h3 class="mume-header" id="question-11017">Question 11017</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;W: Do you think Professor Adam will give us a long term paper instead of giving us tests for the Medieval Lit course?<br>M: I don&apos;t know. I am keeping my fingers crossed that way.<br>What does the man mean?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/2014100915295945.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11017.mp3<br>
+<em><strong>A : He hopes to write a paper.</strong></em><br>
+B : He prefers the tests to the term paper.<br>
+C : He will write a short paper instead of a long one.<br>
+D : He doesn&apos;t know which.<br>
+&#x89E3;&#x6790;&#xFF1A;keeping my fingers crossed&#x610F;&#x4E3A;&#x7948;&#x7977;&#x67D0;&#x4E8B;&#x3001;&#x5E0C;&#x671B;&#x67D0;&#x4E8B;&#x53D1;&#x751F;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x7537;&#x58EB;&#x60F3;&#x5199;&#x8BBA;&#x6587;&#x800C;&#x4E0D;&#x60F3;&#x8003;&#x8BD5;&#x3002;</p>
+<h3 class="mume-header" id="question-10978">Question 10978</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;W: Have you started researching for&#xA0;your paper on computer programming languages of the future?<br>M: To tell you the truth, I&apos;ve been putting it off.<br>What does the man mean?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141008170513432.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/10978.mp3<br>
+A : He withdrew from his computer class.<br>
+B : He doesn&apos;t know what topic to research.<br>
+<em><strong>C : He hasn&apos;t done any work yet.</strong></em><br>
+D : He&apos;s in	a hurry to finish his paper.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x5973;&#x58EB;&#x8BE2;&#x95EE;&#x7537;&#x58EB;&#x8BBA;&#x6587;&#x7684;&#x7814;&#x7A76;&#x8FDB;&#x5C55;&#xFF0C;&#x7537;&#x58EB;&#x56DE;&#x7B54;&#xFF1A;I&apos;ve been putting it off&#xFF0C;&#x77ED;&#x8BED;put off&#x662F;&#x201C;&#x63A8;&#x8FDF;&#xFF0C;&#x62D6;&#x5EF6;&#x201D;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x5373;&#x6211;&#x5DF2;&#x7ECF;&#x63A8;&#x8FDF;&#x4E86;&#x3002;&#x7531;&#x6B64;&#x5224;&#x65AD;&#x4ED6;&#x8FD8;&#x6CA1;&#x6709;&#x5F00;&#x59CB;&#x505A;&#x8BBA;&#x6587;&#x3002;</p>
+<h3 class="mume-header" id="question-10976">Question 10976</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><p>M: Don<span style="FONT-FAMILY: &apos;Calibri&apos;; FONT-SIZE: 12pt; mso-spacerun: &apos;yes&apos;">&apos;</span>t you ever go home? Every time I see you, you are here in the library, poring over your books.<br>W: What do you mean? I thought this was home.</p><br>What can be inferred about the woman?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141008170320723.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/10976.mp3<br>
+A : She prefers to study at home.<br>
+B : She needs to find a new place to live in.<br>
+<em><strong>C : She spends a lot of time in the library.</strong></em><br>
+D : She needs to return some books to the library.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7537;&#x58EB;&#x8BF4;&#x6BCF;&#x6B21;&#x89C1;&#x5230;&#x5973;&#x58EB;&#x5979;&#x90FD;&#x5728;&#x56FE;&#x4E66;&#x9986;&#x4E13;&#x5FC3;&#x8BFB;&#x4E66;&#xFF0C;&#x6240;&#x4EE5;&#x95EE;&#x5979;&#xFF1A;&#x96BE;&#x9053;&#x4F60;&#x4E0D;&#x56DE;&#x5BB6;&#x5417;&#xFF1F;&#x5973;&#x58EB;&#x56DE;&#x7B54;&#xFF1A;I thought this was home&#xFF08;&#x6211;&#x4EE5;&#x4E3A;&#x8FD9;&#x5C31;&#x662F;&#x6211;&#x7684;&#x5BB6;&#xFF09;&#x3002; &#x53EF;&#x89C1;&#x5979;&#x4EE5;&#x56FE;&#x4E66;&#x9986;&#x4E3A;&#x5BB6;&#xFF0C;&#x8BF4;&#x660E;&#x5979;&#x5728;&#x56FE;&#x4E66;&#x9986;&#x82B1;&#x4E86;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#x3002;<p></p>
+<h2 class="mume-header" id="part-2-tx22srct">Part 2 tx22srct</h2>
+
+<h3 class="mume-header" id="question-11185">Question 11185</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="TEXT-ALIGN: justify">M: You must be pretty excited about your trip to Europe. When are you leaving? <br>W: In just three weeks. And I am excited. But there are still a few things I need to do before I go. <br>M: Like what? <br>W: Like renewing my passport, going to the travel agency to buy my plane ticket, and figuring out what to do with my apartment while I&apos;m gone. <br>M: You are not going to give it up, are you? <br>W: No way. I&apos;ll never find another apartment around here. But I don&apos;t like the idea of paying three months&apos; rent on an empty apartment, either. <br>M: Perhaps you could sublet it. <br>W: Yes, but who to? <br>M: Mmm, let me think. Oh, I just know a person. An old colleague of mine, Jim Thomas, is coming here to do some research this summer from June through August. <br>W: That&apos;s exactly when I&apos;ll be away. It sounds ideal as long as the landlord agrees. <br>M: Tell you what. I&apos;ll be calling Jim late this week, anyway. So I&apos;ll mention it to him then. <br>W: Now, thanks, Bill. Let me know what happens. That extra money will really come in handy. <br>&#xA0;</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109152556265.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11185.mp3<p></p>
+<p>Question&#xFF1A;What does the woman need to do at the travel agency?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109152616192.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11185.mp3<br>
+A : Arrange for her accommodations in Europe.<br>
+B : Pick up a passport application form.<br>
+<em><strong>C : Purchase her plane ticket.</strong></em><br>
+D : Change her plane ticket.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;&#x97F3;&#x9891;&#xFF0C;&#x5973;&#x58EB;&#x8C08;&#x5230;&#x4E86;&#x52A8;&#x8EAB;&#x4E4B;&#x524D;&#x8981;&#x505A;&#x7684;&#x51E0;&#x4EF6;&#x4E8B;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4EF6;&#x662F;&#x9700;&#x8981;&#x53BB;&#x65C5;&#x884C;&#x793E;&#x4E70;&#x673A;&#x7968;&#x3002;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;Why doesn&apos;t the woman want to give up her apartment?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109152640397.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11185.mp3<br>
+A : She doesn&apos;t have time to move.<br>
+B : She doesn&apos;t want to paint another apartment.<br>
+<em><strong>C : She would have difficulty finding another apartment nearby.</strong></em><br>
+D : She&apos;s paid her rent for the summer in advance.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;I&apos;ll never find another apartment around here&#x8BF4;&#x660E;&#x5468;&#x56F4;&#x4E0D;&#x53EF;&#x80FD;&#x518D;&#x627E;&#x5230;&#x5176;&#x4ED6;&#x7684;&#x516C;&#x5BD3;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;How does the man know Jim Thomas?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109152706440.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11185.mp3<br>
+A : He went on a summer trip with him.<br>
+B : He&apos;s spoken to him on the phone.<br>
+C : He stayed in his apartment one summer.<br>
+<em><strong>D : He used to work with him.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x660E;&#x786E;&#x63D0;&#x5230;Jim Thomas&#x662F;&#x7537;&#x58EB;&#x4EE5;&#x524D;&#x7684;&#x540C;&#x4E8B;&#x3002;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;How long will the woman be in Europe?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109152750399.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11185.mp3<br>
+<em><strong>A : Three months.</strong></em><br>
+B : Three weeks.<br>
+C : One month.<br>
+D : Over a year.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;&#x97F3;&#x9891;&#xFF0C;&#x9700;&#x8981;&#x79DF;&#x623F;&#x7684;Jim&#x5148;&#x751F;&#x79DF;&#x671F;&#x662F;6&#x6708;&#x5230;8&#x6708;&#xFF0C;&#x6B63;&#x597D;&#x662F;&#x5973;&#x58EB;&#x53BB;&#x6B27;&#x6D32;&#x5EA6;&#x5047;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x5979;&#x5C06;&#x5728;&#x6B27;&#x6D32;&#x5F85;&#x4E09;&#x4E2A;&#x6708;&#x3002;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<h2 class="mume-header" id="part-3-qr108c4b">Part 3 qr108c4b</h2>
+
+<h3 class="mume-header" id="question-11066">Question 11066</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><p>&#xA0;&#xA0;&#xA0; Twenty years ago London could have claimed the title &quot;Smog City, Europe&quot;. Three fourths of its smoke is gone now and the remarkable change was caused by a series of killer fogs in the late 1950s and early 1960s.</p><p style="TEXT-ALIGN: justify">&#xA0;&#xA0;&#xA0; The worst of these settled over London on December 5th, 1952. For four continuous days the city&apos;s normal daily death rate was over 50, and, in all, some 4,000 extra deaths that winter were blamed on the incident. More such fogs came in the winters that followed. Each gave people a big alarm.</p><p style="TEXT-ALIGN: justify">&#xA0;&#xA0; &#xA0;In 1956 Parliament passed the Clean Air Act, declaring that factories and homes in critical areas of the city must switch from soft high sulphur coal to less smoky fuels: hard coal, gas, electricity, or oil. Inevitably there were economic problems and complaints, both to householders and to industries. But, with each passing year, London&apos;s air grew cleaner.</p><p style="TEXT-ALIGN: justify">&#xA0;&#xA0;&#xA0; London has proved that the veil of smog can be cast off, but its success story stands almost alone. In sunny Spain, Madrid has joined the ranks of fog cities. In Italy, acid from smog cuts into centuries old sculpture. And each rain here in Washington washes more acid onto our marble buildings and monuments.</p><p style="TEXT-ALIGN: justify">&#xA0;&#xA0;&#xA0; The massive struggle to clean our air began so recently that victory seems far off. But we have taken an important step and we realize we must do something. In the frequently quoted words of Pogo, &quot;We have met the enemy, and he is us.&quot;</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141010100311609.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11066.mp3<p></p>
+<p>Question&#xFF1A;Which city&apos;s buildings are not suffering from smog according to the passage?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141010100325789.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11066.mp3<br>
+A : Madrid.<br>
+B : Washington.<br>
+C : Rome.<br>
+<em><strong>D : London.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x6839;&#x636E;&#x6587;&#x7AE0;&#x5185;&#x5BB9;London has proved that...almost alone&#xFF0C;&#x5373;&#x4F26;&#x6566;&#x6446;&#x8131;&#x4E86;&#x70DF;&#x96FE;&#x56F0;&#x6270;&#xFF0C;&#x4F46;&#x5B83;&#x662F;&#x552F;&#x4E00;&#x6210;&#x529F;&#x7684;&#x3002;&#x540E;&#x6587;&#x4EE5;&#x4E0D;&#x540C;&#x8BF4;&#x6CD5;&#x8868;&#x660E; Madrid,Italy,Washington&#x7684;&#x70DF;&#x96FE;&#x6C61;&#x67D3;&#x90FD;&#x5F88;&#x4E25;&#x91CD;&#xFF0C;&#x662F;&#x5BF9;&#x4E0A;&#x8FF0;&#x8868;&#x8FBE;&#x7684;&#x652F;&#x6301;&#x3002;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;Where was the article probably published?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141010100338911.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11066.mp3<br>
+A : In Italy.<br>
+B : In Spain.<br>
+<em><strong>C : In the United States.</strong></em><br>
+D : In Britain.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6587;&#x4E2D;&#x63D0;&#x5230;&#xFF1A;And...here in Washington...&#x8868;&#x660E;&#x4E86;&#x8BF4;&#x8BDD;&#x4EBA;&#x6240;&#x5728;&#x5730;&#x662F;Washington&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x6587;&#x53D1;&#x8868;&#x5730;&#x6700;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x5728;&#x7F8E;&#x56FD;&#x3002;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;Which of the following can best describe the main idea of the article?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201410/710/20141010100359503.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/11066.mp3<br>
+A : Illustrate the bad effects of smog to buildings.<br>
+B : Praise London for cleaning off smog.<br>
+<em><strong>C : Appeal to American people to act against smog.</strong></em><br>
+D : Introduce the Clean Air Act.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x6587;&#x7AE0;&#x4E3B;&#x9898;&#x53E5;&#x4E00;&#x822C;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x9996;&#x6BB5;&#x6216;&#x5C3E;&#x6BB5;&#x3002;&#x6B64;&#x95EE;&#x9898;&#x51FA;&#x73B0;&#x5728;&#x6700;&#x540E;&#x53EF;&#x4EE5;&#x63A8;&#x65AD;&#xFF0C;&#x5C3E;&#x6BB5;&#x662F;&#x6211;&#x4EEC;&#x89E3;&#x7B54;&#x6B64;&#x9898;&#x7684;&#x5173;&#x952E;&#x3002;&#x6700;&#x540E;&#x4E00;&#x6BB5;&#x63D0;&#x5230;&#xFF1A;struggle to clean our air, victory seems far off, we have taken...step, we realize we must do something&#x7B49;&#x7B49;&#xFF0C;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x70B9;&#x8BF4;&#x660E;&#xFF0C;&#x4F5C;&#x8005;&#x501F;&#x672C;&#x6587;&#x53F7;&#x53EC;&#x5927;&#x5BB6;&#x91C7;&#x53D6;&#x884C;&#x52A8;&#xFF0C;&#x6218;&#x80DC;&#x70DF;&#x96FE;&#x3002;&#x7531;&#x4E0A;&#x9898;&#x53EF;&#x77E5;&#xFF0C;&#x4F5C;&#x8005;&#x8EAB;&#x5904;&#x7F8E;&#x56FD;&#xFF0C;&#x6545;&#x547C;&#x5401;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x7F8E;&#x56FD;&#x4EBA;&#x3002;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<h3 class="mume-header" id="question-19154958">Question 19154958</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">In last week&#x2019;s lecture, we discussed the characteristics of the newly born offspring of several mammals. You probably remember that human infants are less developed physically than other mammals of the same age. But in today&#x2019;s lecture, we&#x2019;ll look at three very interesting studies that hint at the surprising abilities of human babies.<br><br>
+&#xA0;<br><br>
+In the first study, three-year-olds watched two videos shown side by side, each featuring a different researcher, one of whom they&#x2019;d met once two years earlier. The children spent longer watching the video showing the researcher they hadn&#x2019;t met. This is consistent with young children&#x2019;s usual tendency to look longer at things that aren&#x2019;t familiar. And really, this is amazing. It suggests the children remember the researcher they&#x2019;ve met just one time when they were only one-year-olds. Of course, as most of us forget memories from our first few years as we grow older, these early long-term memories will likely be lost in subsequent years.<br><br>
+&#xA0;<br><br>
+Our second study is about music. For this study, researchers played music to babies through speakers located on either side of a human face. They waited until the babies got bored and averted their gaze from the face. And then they changed the mood of the music, either from sad to happy or the other way around. This mood switch made no difference to the three-month-olds; but for the nine-month-olds, it was enough to renew their interest and they started looking again in the direction of the face. This suggests that babies of that age can tell the difference between a happy melody and a sad tune.<br><br>
+&#xA0;<br><br>
+Our final study is from 1980, but it&#x2019;s still relevant today. In fact, it&#x2019;s one of the most famous pieces of research about infant emotion ever published. The study involved ordinary adults watching video clips of babies (nine months or younger). In the video clips, the babies made various facial expressions in response to real-life events, including playful interactions and painful ones. The adult observers were able to reliably discern an assortment of emotions on the babies&#x2019; faces. These emotions included interest, joy, surprise, sadness, anger, disgust, contempt and fear.<br><br>
+&#xA0;<br><br>
+Next week, we&#x2019;ll be looking at this last study more closely. In fact, we will be viewing some of the video clips from that study, and together, see how well we do in discerning the babies&#x2019; emotions.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/xykkdy_27160545014.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/19154958.mp3<p></p>
+<p>Question&#xFF1A;What are the three interesting studies about?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/nzqwrn_27160545016.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/19154958.mp3<br>
+A : Cognitive features of different newly born mammals.<br>
+B : Adults&#x2019; influence on children.<br>
+C : Similarities between human babies and baby animals.<br>
+<em><strong>D : Abilities of human babies.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x5F00;&#x5934;&#x63D0;&#x5230;&#xFF0C;&#x4ECA;&#x5929;&#x7684;&#x8BB2;&#x5EA7;&#x5C06;&#x63D0;&#x5230;&#x4E09;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x7814;&#x7A76;&#xFF0C;&#x8FD9;&#x4E9B;&#x7814;&#x7A76;&#x6697;&#x793A;&#x4E86;&#x4EBA;&#x7C7B;&#x5A74;&#x513F;&#x7684;&#x60CA;&#x4EBA;&#x80FD;&#x529B;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What does the second study find about nine-month-old babies?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/sucbxo_27160545017.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/19154958.mp3<br>
+<em><strong>A : They can distinguish a happy tune from a sad one.</strong></em><br>
+B : They are already sensitive to beats and rhythms.<br>
+C : They fall asleep easily while listening to music.<br>
+D : They love happy melodies more than sad ones.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x97F3;&#x4E50;&#x7684;&#x57FA;&#x8C03;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x5BF9;&#x4E09;&#x4E2A;&#x6708;&#x5927;&#x7684;&#x5A74;&#x513F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x5F71;&#x54CD;&#xFF1B;&#x4F46;&#x662F;&#x80FD;&#x591F;&#x91CD;&#x65B0;&#x6FC0;&#x53D1;&#x4E5D;&#x4E2A;&#x6708;&#x5927;&#x7684;&#x5A74;&#x513F;&#x7684;&#x5174;&#x8DA3;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F1A;&#x91CD;&#x65B0;&#x5F80;&#x4EBA;&#x8138;&#x7684;&#x65B9;&#x5411;&#x770B;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4E5D;&#x4E2A;&#x6708;&#x5927;&#x7684;&#x5A74;&#x513F;&#x80FD;&#x591F;&#x5206;&#x8FA8;&#x5FEB;&#x4E50;&#x548C;&#x60B2;&#x4F24;&#x7684;&#x66F2;&#x8C03;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;What is the 1980 study about?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/qhifuf_27160545017.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit4/19154958.mp3<br>
+<em><strong>A : Babies&#x2019; emotions.</strong></em><br>
+B : Infants&#x2019; behaviors.<br>
+C : Infants&#x2019; facial expressions.<br>
+D : Babies&#x2019; interaction with adults.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;1980&#x5E74;&#x7684;&#x7814;&#x7A76;&#x662F;&#x8FC4;&#x4ECA;&#x4E3A;&#x6B62;&#x53D1;&#x8868;&#x7684;&#x5173;&#x4E8E;&#x5A74;&#x513F;&#x60C5;&#x7EEA;&#x6700;&#x8457;&#x540D;&#x7684;&#x7814;&#x7A76;&#x4E4B;&#x4E00;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

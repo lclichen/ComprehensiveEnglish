@@ -1,0 +1,442 @@
+<!DOCTYPE html><html><head>
+      <title>Unit11</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-11-1031842897">Unit 11 1031842897</h1>
+
+<h2 class="mume-header" id="part-1-w3fibsyr">Part 1 w3fibsyr</h2>
+
+<h3 class="mume-header" id="question-19143053">Question 19143053</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">M: Hi, Jane. How is your vacation?<br><br>
+W: Terrific! I went to Washington D.C. to visit my cousin. I saw the Jefferson Memorial, the Lincoln Memorial, the Smithsonian Institution, and the White House.<br><br>
+M: I&#x2019;ve never been to Washington. What did you like the best?<br><br>
+W: Oh, the White House. Did you know that it&#x2019;s been the official home of our presidents since 1800? And every president except George Washington has lived in it.<br><br>
+M: I didn&#x2019;t know it was that old. Is it really as nice as everyone says it is?<br><br>
+W: It&#x2019;s only a three-storey building built of stone. But it&#x2019;s simple and definite. It used to be called the &#x201C;President&#x2019;s House&#x201D;. President Theodore Roosevelt officially gave the White House its current name in 1901. The White House has a fascinating history. It survived a fire at the hands of the British in 1814.<br><br>
+M: I remember now. The president then was James Madison. And his wife Dolley ran out of the burning building carrying Gilbert Stuart&#x2019;s portrait of Washington.<br><br>
+W: Yes, that&#x2019;s right. It&#x2019;s hanging in the East Room now.<br><br>
+M: How big is the White House?<br><br>
+W: It&#x2019;s big. Imagine 18 acres of land with gardens and 132 rooms. It has to be painted every four years.<br><br>
+M: How much were you allowed to see?<br><br>
+W: Not very much. Only six of the rooms are open to the public. It&#x2019;s a popular tour, and there is always a line of people waiting. They want to look at their property, I guess.<br><br>
+M: Their property?<br><br>
+W: Sure. The White House is owned by the people of the United States. We elect the leaders who live in it.<br><br>
+M: But can just anyone go inside?<br><br>
+W: Of course. Anyone can see our president&#x2019;s home.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201501/710/20150109152252779.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19143053.mp3<p></p>
+<p>Question&#xFF1A;Who was the occupant of the White House at the time of the fire in 1814?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/t_103/201908/aqdeyx_13105606012.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19143053.mp3<br>
+A : Abraham Lincoln.<br>
+B : George Washington.<br>
+<em><strong>C : James Madison.</strong></em><br>
+D : Thomas Jefferson.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#x51E0;&#x4F4D;&#x603B;&#x7EDF;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4F46;&#x662F;&#x767D;&#x5BAB;&#x88AB;&#x70E7;&#x65F6;&#x5728;&#x4F4D;&#x7684;&#x603B;&#x7EDF;&#x662F;&#x8A79;&#x59C6;&#x65AF;&#x2022;&#x9EA6;&#x8FEA;&#x900A;&#x3002;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What did the president&#x2019;s wife save from the White House during the fire?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/t_103/201908/hmgfij_13105606017.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19143053.mp3<br>
+A : Her best white dress.<br>
+B : Her son.<br>
+C : A British doll.<br>
+<em><strong>D : A portrait of George Washington.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x660E;&#x786E;&#x63D0;&#x5230;&#x767D;&#x5BAB;&#x88AB;&#x70E7;&#x65F6;&#x8A79;&#x59C6;&#x65AF;&#x2022;&#x9EA6;&#x8FEA;&#x900A;&#x603B;&#x7EDF;&#x7684;&#x59BB;&#x5B50;&#x6551;&#x51FA;&#x4E86;&#x534E;&#x76DB;&#x987F;&#x603B;&#x7EDF;&#x7684;&#x753B;&#x50CF;&#x3002;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What part of the White House is open to the public?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/t_103/201908/koumjk_13105606018.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19143053.mp3<br>
+A : The gardens only.<br>
+B : The entire White House.<br>
+C : The East Room only.<br>
+<em><strong>D : Six rooms only.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x767D;&#x5BAB;&#x5171;&#x6709;132&#x4E2A;&#x623F;&#x95F4;&#xFF0C;&#x4F46;&#x5BF9;&#x516C;&#x4F17;&#x6E38;&#x5BA2;&#x5F00;&#x653E;&#x7684;&#x53EA;&#x6709;&#x5176;&#x4E2D;&#x516D;&#x95F4;&#x3002;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;What can we learn about the White House from the conversation?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/t_103/201908/gprjzr_13105606018.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19143053.mp3<br>
+A : It has to be painted every two years.<br>
+B : George Washington gave the White House its current name.<br>
+<em><strong>C : It is owned by the people of the United States.</strong></em><br>
+D : Every president of the United Sates has lived in it.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x63D0;&#x5230;&#xFF0C;&#x767D;&#x5BAB;&#x5F52;&#x7F8E;&#x56FD;&#x4EBA;&#x6C11;&#x6240;&#x6709;&#xFF0C;&#x7F8E;&#x56FD;&#x4EBA;&#x6C11;&#x9009;&#x4E3E;&#x4F4F;&#x5728;&#x767D;&#x5BAB;&#x4E2D;&#x7684;&#x9886;&#x5BFC;&#x4EBA;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<h3 class="mume-header" id="question-1000910445">Question 1000910445</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><p>W: Have you finished playing your video game? Let&#x2019;s go to see that new comedy at the movie theater.</p><p>M: Susan, did you say comedy? We&#x2019;re not going to a comedy. We&#x2019;re going to the new action movie, right?</p><p>W: Ugh! I hate those kinds of movies. I don&#x2019;t want to see an action movie! You&#x2019;ve played violent video games all day! Enough violence! You spend hours every day playing those violent video games, and then you want to go to see violent movies. Violence and more violence! It&#x2019;s not healthy, John!</p><p>M: That&#x2019;s not all I do. I just like those kinds of things &#x2013; not real violence, but action movies and video games are fun. I don&#x2019;t know why you don&#x2019;t want me to have fun or play these games with me.</p><p>W: Why are you making it my problem? Of course I want you to have fun, but it needs to be healthy! All of this violence is not good for you, and it&#x2019;s not good for us in our relationship. Honestly, John, how can you feel romantic toward me, your wife, after playing a violent video game for three hours?</p><p>M: OK, Susan, good point. I guess I&#x2019;ve had enough violence for today.</p><p>W: Listen, let&#x2019;s head out to the movies. I&#x2019;m excited. Let&#x2019;s go to the new movie theater with the special sound system at the corner of 8th Street and Main Street.</p><p>M: Yeah! That&#x2019;s a great idea! I love seeing movies in a theater where the sound is all around you. And most of all, I like sitting next to the woman I love watching a great movie! How about some popcorn?</p><p>W: Absolutely! Love you!!</p><p>M: Love you, too! And hey, you look really beautiful tonight!</p><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/db80a68c-5648-4f06-9c0a-d4e01148ec3c.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910445.mp3<p></p>
+<p>Question&#xFF1A;What does the woman want to do with the man?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/09df459c-11dc-464b-a968-b179cd1929cf.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910445.mp3<br>
+A : Play video games.<br>
+B : See the new theater.<br>
+<em><strong>C : Watch a new comedy.</strong></em><br>
+D : See an action movie.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What does the man think about those violent video games?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/659f9deb-a2c2-4beb-aef5-4f0e3f79fdd6.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910445.mp3<br>
+A : They are healthier than action movies.<br>
+B : They help him solve problems.<br>
+C : They are less violent than action movies.<br>
+<em><strong>D : They give him a lot of fun.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What does the woman say about the man&#x2019;s exposure to media violence?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/41a55277-4371-4baf-b126-9981cb6905da.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910445.mp3<br>
+<em><strong>A : It is harmful to their relationship.</strong></em><br>
+B : It presents no risk to his health.<br>
+C : It stops him from having fun.<br>
+D : It takes his time away from other things.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;What is special about the new movie theater?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_320/c_4/t_103/201510/a65825b2-dbbb-486f-bad3-47a6aff3b220.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910445.mp3<br>
+A : It sells delicious popcorn.<br>
+B : It shows lots of great movies.<br>
+C : It has a great location.<br>
+<em><strong>D : It has a special sound system.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<h2 class="mume-header" id="part-2-6uv45paz">Part 2 6uv45paz</h2>
+
+<h3 class="mume-header" id="question-1000910403">Question 1000910403</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">Genes are the parts of cells that control the growth of living things, including people. Now, a company in Iceland is working to create the most detailed map yet of all known human genes. Doctor Karl Stefansson, head of the company, believes that the people of Iceland present a special chance to study the human genome and how some genes cause disease. Iceland has a very small population&#x2014;about 280,000 people. The majority of the population shares a small group of common ancestors who lived thousands of years ago. The people of Iceland keep extensive records of their ancestors. In addition, Iceland has an excellent healthcare system. Doctor Stefansson says his researchers are studying genetic diseases in many families over hundreds of years. So far, researchers have examined the genes of at least 146 families. The Iceland genome project is using a much larger group of individuals to observe differences in human genes than any other project. For example, American scientists made a genetic map based on only eight large families in France. Human beings have almost exactly the same genes. Small genetic differences make us look different from each other. These differences can also make us more likely to get some diseases. The company&apos;s main project is to identify genes that cause disease. Scientists believe most common diseases are caused by several abnormal genes working together. The company claims to have already found three disease-causing genes, linking to a mental disease and two kinds of strokes.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1020/c_4/u_8/201511/u8-5-1.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910403.mp3<p></p>
+<p>Question&#xFF1A;None<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="None"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910403.mp3<br>
+<em><strong>A : Creating a detailed map of all human genes.</strong></em><br>
+B : Creating a detailed map of the genes of the Icelandic people.<br>
+C : Creating a map as detailed as those by some other projects.<br>
+D : Creating a map less detailed than that by the American company.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;None<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="None"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910403.mp3<br>
+A : Because it observes 14 large families.<br>
+<em><strong>B : Because it observes more families than any other project.</strong></em><br>
+C : Because it observes 200 million people.<br>
+D : Because it observes more families than many other projects.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<p>Question&#xFF1A;None<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="None"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/1000910403.mp3<br>
+A : Finding out the special genes of Irish people to cure their diseases.<br>
+<em><strong>B : Creating a detailed human genetic map to identify disease-causing genes.</strong></em><br>
+C : Creating a detailed human genetic map to identify abnormally small genes.<br>
+D : Finding out the history of Irish families.<br>
+&#x89E3;&#x6790;&#xFF1A;None</p>
+<h3 class="mume-header" id="question-19142111">Question 19142111</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align: justify;">Obesity rates among children in Asia-Pacific are rising at a rapid rate. The number of overweight children under five rose 38 percent between 2000 and 2016 in the region, and the problem is growing, said a food safety and nutrition officer at the U.N.&#x2019;s Food and Agriculture Organization in Bangkok.<br><br>
+&#xA0;<br><br>
+The rate of growth in obesity in Asia-Pacific is higher than in many other countries. While the United States leads the way on obesity rates, the number of overweight children in Asia-Pacific is rising rapidly,&#xA0;and many countries in this region are now among the most health-threatened in the world.<br><br>
+&#xA0;<br><br>
+Adult obesity rates are highest in the United States, Mexico, New Zealand and Hungary, and lowest in Japan and South Korea. But the rapid rise in obesity among young people in Asia-Pacific is worrying because overweight children are at higher risk of becoming obese as adults and then developing serious health problems like type 2 diabetes, high blood pressure and liver disease.<br><br>
+&#xA0;<br><br>
+Malaysia, Indonesia, Singapore and Thailand are among the most overweight countries in Southeast Asia.&#xA0;Many of these nations are also struggling to tackle malnutrition among their citizens.<br><br>
+&#xA0;<br><br>
+The cost to the Asia-Pacific region of citizens being overweight or obese is $166 billion a year, a recent report by the Asian Development Bank Institute said.<br><br>
+&#xA0;<br><br>
+Rising wealth levels over the last 20 years have played a major role in the rise in obesity levels, researchers say. The region has undergone economic growth, so food has become available at a relatively cheaper price. For the last 20 years the economic growth has been almost uninterrupted.<br><br>
+&#xA0;<br><br>
+In addition to consuming more, as economies have grown, people in Asia-Pacific have moved away from farming into manufacturing, and then to service sector jobs, which are more sedentary, characterized by much sitting and little physical exercise. City-dwellers in Asia-Pacific can spend hours commuting, and when they finally reach home they have little time to cook. Many opt to eat out.&#xA0;This new lifestyle has caused a rise in the consumption of convenience and processed foods, which often contain excess fats and more salt and sugar. People in the region also struggle to maintain a balanced diet with meals often lacking vegetables.&#xA0;</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201906/p_10103254/uixlvc_19101350574.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19142111.mp3<p></p>
+<p>Question&#xFF1A;What is the speaker mainly talking about?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201906/p_10103254/anwsrz_19101350576.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19142111.mp3<br>
+A : Health problems faced by Asian nations.<br>
+B : Rising wealth levels in Asia-Pacific.<br>
+<em><strong>C : Rising obesity rates in Asia-Pacific.</strong></em><br>
+D : Changing dietary habits of city-dwellers.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x4E3B;&#x65E8;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x4E9A;&#x592A;&#x5730;&#x533A;&#x513F;&#x7AE5;&#x548C;&#x6210;&#x5E74;&#x4EBA;&#x7684;&#x80A5;&#x80D6;&#x7387;&#x6B63;&#x5728;&#x8FC5;&#x901F;&#x4E0A;&#x5347;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;What does the speaker say about overweight children?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201906/p_10103254/yrroxu_19101350576.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19142111.mp3<br>
+A : They should be monitored from a very young age.<br>
+<em><strong>B : They are at higher risk of becoming obese as adults.</strong></em><br>
+C : They may suffer from lack of nutrition at the same time.<br>
+D : They are more likely to have aggressive personalities.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x8D85;&#x91CD;&#x513F;&#x7AE5;&#x6210;&#x5E74;&#x540E;&#x53D8;&#x80A5;&#x80D6;&#x7684;&#x98CE;&#x9669;&#x66F4;&#x9AD8;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What is the effect of the new lifestyle for city dwellers?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201906/p_10103254/ntzomg_19101350577.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit11/19142111.mp3<br>
+A : A more balanced diet.<br>
+B : Longer commuting time.<br>
+<em><strong>C : More consumption of convenience foods.</strong></em><br>
+D : More time spent in doing exercises.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x8FD9;&#x79CD;&#x65B0;&#x7684;&#x751F;&#x6D3B;&#x65B9;&#x5F0F;&#x5BFC;&#x81F4;&#x57CE;&#x5E02;&#x5C45;&#x6C11;&#x66F4;&#x591A;&#x98DF;&#x7528;&#x65B9;&#x4FBF;&#x98DF;&#x54C1;&#x548C;&#x52A0;&#x5DE5;&#x98DF;&#x54C1;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

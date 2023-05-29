@@ -1,0 +1,463 @@
+<!DOCTYPE html><html><head>
+      <title>Unit5</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lichen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="unit-5-1031486508">Unit 5 1031486508</h1>
+
+<h2 class="mume-header" id="part-1-8956d4kn">Part 1 8956d4kn</h2>
+
+<h3 class="mume-header" id="question-10876">Question 10876</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;W: Winter is coming. I am expecting the first snow. The pure white is always my favorite.&lt;O:P&gt;&lt;/O:P&gt; </p><p>M: But as it&apos;s colder and colder, my eagerness to get up early and my desire to do some morning exercise is fading out. I need to figure out some other ways to keep fit.<span style="FONT-FAMILY: &#x5B8B;&#x4F53;; FONT-SIZE: 12pt; mso-bidi-font-family: &#x5B8B;&#x4F53;; mso-font-kerning: 0pt" lang="EN-US">&lt;O:P&gt;&lt;/O:P&gt;</span></p><br>What can we learn about the man?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018163817375.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10876.mp3<br>
+A : He likes winter because it could help him keep fit.<br>
+B : He doesn&apos;t like winter because it is cold.<br>
+C : He doesn&apos;t like winter sports so he wants to do some other sports instead.<br>
+<em><strong>D : He thinks the cold weather reduces his interest in doing sports in the morning.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#xFF0C;&#x5973;&#x58EB;&#x559C;&#x6B22;&#x51AC;&#x5929;&#x7684;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#x5176;&#x559C;&#x6B22;&#x7EAF;&#x767D;&#x7684;&#x96EA;&#xFF0C;&#x800C;&#x7537;&#x58EB;&#x5219;&#x89C9;&#x5F97;&#xFF0C;&#x51AC;&#x5929;&#x5BD2;&#x51B7;&#x7684;&#x6C14;&#x5019;&#x4F7F;&#x5176;&#x5BF9;&#x4E8E;&#x6668;&#x7EC3;&#x7684;&#x70ED;&#x60C5;&#x9010;&#x6E10;&#x6D88;&#x9000;&#x4E86;&#xFF08;fading out&#xFF09;&#x3002;&#x56E0;&#x6B64;&#x4ED6;&#x8981;&#x518D;&#x627E;&#x4E9B;&#x5176;&#x5B83;&#x4FDD;&#x6301;&#x8EAB;&#x6750;&#x7684;&#x529E;&#x6CD5;&#x3002;&#x6240;&#x4EE5;&#x9009;D&#x3002;<p></p>
+<h3 class="mume-header" id="question-10877">Question 10877</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;M: Have you heard the news that the new high technology weapons help the local police to reduce the crime rate in out area? It is comforting news, isn&apos;t it?&lt;O:P&gt;&lt;/O:P&gt; </p><p>W: Well, I think the policemen should have the wits to tame the local criminals rather than using their weapons.<span style="FONT-FAMILY: &#x5B8B;&#x4F53;; FONT-SIZE: 12pt; mso-bidi-font-family: &#x5B8B;&#x4F53;; mso-font-kerning: 0pt" lang="EN-US">&lt;O:P&gt;&lt;/O:P&gt;</span></p><br>What is the woman&apos;s attitude towards the new high technology weapons?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018163834894.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10877.mp3<br>
+<em><strong>A : Negative.</strong></em><br>
+B : Optimistic.<br>
+C : Sympathetic.<br>
+D : Positive.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x5F53;&#x5730;&#x72AF;&#x7F6A;&#x7387;&#x964D;&#x4F4E;&#x7684;&#x539F;&#x56E0;&#x662F;&#x8B66;&#x5BDF;&#x7528;&#x4E86;&#x9AD8;&#x79D1;&#x6280;&#x6B66;&#x5668;&#xFF08;high technology weapons&#xFF09;&#xFF0C;&#x7537;&#x58EB;&#x89C9;&#x5F97;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x662F;&#x5F88;&#x5B89;&#x6170;&#x4EBA;&#x7684;&#x3002;&#x53EF;&#x5973;&#x58EB;&#x7684;&#x610F;&#x89C1;&#x5219;&#x662F;&#xFF0C;&#x8B66;&#x5BDF;&#x5E94;&#x8BE5;&#x7528;&#x4ED6;&#x4EEC;&#x7684;&#x667A;&#x6167;&#xFF08;wits&#xFF09;&#x800C;&#x975E;&#x6B66;&#x5668;&#x6765;&#x5236;&#x670D;&#x7F6A;&#x72AF;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5973;&#x58EB;&#x5BF9;&#x4E8E;&#x6B64;&#x5219;&#x6D88;&#x606F;&#x7684;&#x6001;&#x5EA6;&#x662F;&#x6D88;&#x6781;&#x7684;&#xFF08;negative&#xFF09;&#x3002;&#x6240;&#x4EE5;&#x9009;B&#x3002;<p></p>
+<h3 class="mume-header" id="question-10008767">Question 10008767</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="text-align:justify">W: Did you read the <i>Morning News</i>? They did a story&#xA0;on our election campaign.<br><br>
+M: Sure. I guess it&#x2019;ll spark some interest among the&#xA0;women in town. Without their votes we won&#x2019;t be&#xA0;able to win the election.<br><br>
+What do we learn about the speakers from the conversation?</div><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201603/p_10000433/eamcqx_16154122836.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10008767.mp3<br>
+<em><strong>A : They are launching a campaign to attract women voters.</strong></em><br>
+B : They are conducting a survey among the women in town.<br>
+C : They are writing a story for the Morning News.<br>
+D : They are facing great challenges to get re-elected.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x5973;&#x58EB;&#x8BF4;&#x300A;&#x65E9;&#x95F4;&#x65B0;&#x95FB;&#x300B;&#x62A5;&#x9053;&#x4E86;&#x4ED6;&#x4EEC;&#x7684;&#x7ADE;&#x9009;&#x6D3B;&#x52A8;&#xFF0C;&#x7537;&#x58EB;&#x8BF4;&#x8FD9;&#x4F1A;&#x6FC0;&#x8D77;&#x57CE;&#x9547;&#x4E2D;&#x5973;&#x6027;&#x7684;&#x5174;&#x8DA3;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5973;&#x6027;&#x7684;&#x6295;&#x7968;&#xFF0C;&#x4ED6;&#x4EEC;&#x5C31;&#x4E0D;&#x80FD;&#x5728;&#x7ADE;&#x9009;&#x4E2D;&#x83B7;&#x80DC;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x5BF9;&#x8BDD;&#x8005;&#x662F;&#x60F3;&#x5438;&#x5F15;&#x5973;&#x6027;&#x7684;&#x6CE8;&#x610F;&#x5E76;&#x5F97;&#x5230;&#x5979;&#x4EEC;&#x7684;&#x6295;&#x7968;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;<p></p>
+<h3 class="mume-header" id="question-10008849">Question 10008849</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="text-align:justify">W: The print in this dictionary is so small. I can&#x2019;t read&#xA0;the explanations at all.<br><br>
+M: Let me get my magnifying glass. I know I just&#xA0;can&#x2019;t do without it.<br><br>
+What does the man mean?</div><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201603/p_10000434/peapgr_17145445535.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10008849.mp3<br>
+<em><strong>A : He has to use a magnifying glass to see clearly.</strong></em><br>
+B : He has the dictionary the woman wants.<br>
+C : The dictionary is not of much help to him.<br>
+D : The woman can use his glasses to read.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x8BF4;&#x5B57;&#x5178;&#x4E0A;&#x7684;&#x5B57;&#x592A;&#x5C0F;&#xFF0C;&#x5979;&#x770B;&#x4E0D;&#x6E05;&#x3002;&#x7537;&#x58EB;&#x8BF4;&#x4ED6;&#x8981;&#x53BB;&#x53D6;&#x653E;&#x5927;&#x955C;&#xFF0C;&#x5426;&#x5219;&#x4ED6;&#x4E5F;&#x770B;&#x4E0D;&#x6E05;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x7537;&#x58EB;&#x662F;&#x8BF4;&#x4ED6;&#x5FC5;&#x987B;&#x7528;&#x653E;&#x5927;&#x955C;&#x624D;&#x80FD;&#x770B;&#x6E05;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;<p></p>
+<h3 class="mume-header" id="question-10008846">Question 10008846</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="text-align:justify">W: Wow, what a variety of salads you&#x2019;ve got on your&#xA0;menu! Could you recommend something special?<br><br>
+M: Well, I think you can try this mixed salad. We&#xA0;made the dressing with fresh berries.<br><br>
+What does the man mean?</div><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201603/p_10000434/jnqhlf_17144317895.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10008846.mp3<br>
+<em><strong>A : The dressing makes the mixed salad very inviting.</strong></em><br>
+B : The woman should mix the ingredients thoroughly.<br>
+C : The restaurant is known for its food varieties.<br>
+D : The restaurant offers some specials each day.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x95EE;&#x7537;&#x58EB;&#x6709;&#x4EC0;&#x4E48;&#x7279;&#x522B;&#x63A8;&#x8350;&#x7684;&#xFF0C;&#x7537;&#x58EB;&#x8BF4;&#x53EF;&#x4EE5;&#x5C1D;&#x5C1D;&#x4EC0;&#x9526;&#x6C99;&#x62C9;&#xFF0C;&#x4ED6;&#x4EEC;&#x7528;&#x65B0;&#x9C9C;&#x6D46;&#x679C;&#x5236;&#x6210;&#x8C03;&#x5473;&#x9171;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x7537;&#x58EB;&#x662F;&#x8BF4;&#x8C03;&#x5473;&#x9171;&#x4F7F;&#x4EC0;&#x9526;&#x6C99;&#x62C9;&#x975E;&#x5E38;&#x8BF1;&#x4EBA;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;<p></p>
+<h3 class="mume-header" id="question-10008763">Question 10008763</h3>
+
+<p>&#x77ED;&#x5BF9;&#x8BDD;&#x6587;&#x672C;&#xFF1A;</p><div style="text-align:justify">W: Excuse me, did anybody see my cell phone after&#xA0;the last show? It may have slipped out of my pocket&#xA0;during the performance.<br><br>
+M: In fact, we found several. Please go check at the&#xA0;ticket counter.<br><br>
+What do we learn from the conversation?</div><br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/201603/p_10000433/vtsjlw_16152604990.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10008763.mp3<br>
+A : The woman forgot where she had left her cell phone.<br>
+B : The woman was very pleased to find her cell phone.<br>
+<em><strong>C : A number of cell phones were found after the last show.</strong></em><br>
+D : Reserved tickets could be picked up at the ticket counter.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x5973;&#x58EB;&#x95EE;&#x5728;&#x6700;&#x540E;&#x4E00;&#x573A;&#x8868;&#x6F14;&#x540E;&#x662F;&#x5426;&#x6709;&#x4EBA;&#x770B;&#x89C1;&#x5979;&#x7684;&#x624B;&#x673A;&#x3002;&#x7537;&#x58EB;&#x56DE;&#x7B54;&#x8BF4;&#x4ED6;&#x4EEC;&#x627E;&#x5230;&#x4E86;&#x597D;&#x51E0;&#x90E8;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x8868;&#x6F14;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x627E;&#x5230;&#x4E86;&#x591A;&#x90E8;&#x624B;&#x673A;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;<p></p>
+<h2 class="mume-header" id="part-2-tx22srct">Part 2 tx22srct</h2>
+
+<h3 class="mume-header" id="question-19154952">Question 19154952</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align:justify">M: Today, our guest is Rosie Mullender, who works as a features editor for a fashion magazine. Hi Rosie, you&#x2019;re a features editor at one of the most widely-read women&#x2019;s magazines in the U.K. What kind of responsibilities does that job entail?<br><br>
+W: We spend our days looking at ideas from journalists, writing copy for the magazine and website, and editing. We do random things like asking people in the street questions and testing sports clothing. We also do less tangible things like understanding what our readers want. It&#x2019;s certainly varied and sometimes bizarre.<br><br>
+M: During your working day what kind of work might you typically do?<br><br>
+W: My day mainly incorporates responding to emails, writing and editing stories and coming up with new feature ideas.<br><br>
+M: How does the job of features editor differ from that of fashion editor or other editorial positions?<br><br>
+W: The features team deals with articles such as careers, reports, confidence and confessions&#x2014;everything except fashion and beauty.<br><br>
+M: A lot of people believe that working at a magazine is a glamorous job. Is this an accurate representation of what you do?<br><br>
+W: I&#x2019;d say it&#x2019;s glamorous to an extent, but not in the way it&#x2019;s portrayed in films. We do have our moments, such as interviewing celebrities and attending parties, which is a huge thrill. Ultimately though, we&#x2019;re the same as our readers, but working in a job we&#x2019;re all very lucky to have.<br><br>
+M: Did you have to overcome any difficulties to reach this point in your career? How did you manage to do this?<br><br>
+W: I had to be really persistent and it was very hard work. After three years of working in a petrol station and doing unpaid work, I still hadn&#x2019;t managed to get an entry-level job. I was lucky that my last desperate attempt led to a job. I told myself that all experiences make you a better journalist in the long run and luckily, I was right.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/zxqtgf_27155858277.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154952.mp3<p></p>
+<p>Question&#xFF1A;What is the woman&#x2019;s profession?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/fninaw_27155858279.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154952.mp3<br>
+A : Magazine reporter.<br>
+B : Website designer.<br>
+<em><strong>C : Features editor.</strong></em><br>
+D : Fashion designer.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E00;&#x5F00;&#x59CB;&#xFF0C;&#x7537;&#x58EB;&#x5C31;&#x4ECB;&#x7ECD;&#x4E86;&#x5973;&#x58EB;&#x7684;&#x804C;&#x4E1A;&#xFF0C;&#x8BF4;&#x5979;&#x662F;&#x4E00;&#x540D;&#x65F6;&#x5C1A;&#x6742;&#x5FD7;&#x7684;&#x4E13;&#x680F;&#x7F16;&#x8F91;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What is one of the woman&#x2019;s main responsibilities?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/uqtzhr_27155858279.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154952.mp3<br>
+<em><strong>A : Answering daily emails.</strong></em><br>
+B : Interviewing job-seekers.<br>
+C : Designing sports clothing.<br>
+D : Consulting fashion experts.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x5973;&#x58EB;&#x63D0;&#x5230;&#xFF0C;&#x5979;&#x7684;&#x65E5;&#x5E38;&#x5DE5;&#x4F5C;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x56DE;&#x590D;&#x90AE;&#x4EF6;&#x3001;&#x64B0;&#x5199;&#x548C;&#x7F16;&#x8F91;&#x65B0;&#x95FB;&#x3001;&#x63D0;&#x4F9B;&#x65B0;&#x7684;&#x4E13;&#x680F;&#x521B;&#x610F;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<p>Question&#xFF1A;What do many people think about the woman&#x2019;s job?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/ohaask_27155858280.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154952.mp3<br>
+A : It is tiresome.<br>
+<em><strong>B : It is fascinating.</strong></em><br>
+C : It is fashionable.<br>
+D : It is challenging.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x7537;&#x58EB;&#x63D0;&#x5230;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x8BA4;&#x4E3A;&#x5728;&#x6742;&#x5FD7;&#x793E;&#x5DE5;&#x4F5C;&#x662F;&#x4E00;&#x4EF6;&#x7279;&#x522B;&#x4EE4;&#x4EBA;&#x5411;&#x5F80;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+<p>Question&#xFF1A;What helped the woman to get her current position?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103927/pldcdk_27155858280.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154952.mp3<br>
+A : Her confidence.<br>
+B : Her competence.<br>
+C : Her experience.<br>
+<em><strong>D : Her persistence.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#xFF0C;&#x7537;&#x58EB;&#x95EE;&#x5973;&#x58EB;&#x662F;&#x5982;&#x4F55;&#x83B7;&#x5F97;&#x8FD9;&#x4EFD;&#x5DE5;&#x4F5C;&#x7684;&#xFF0C;&#x5973;&#x58EB;&#x56DE;&#x7B54;&#x8BF4;&#xFF0C;&#x5979;&#x5FC5;&#x987B;&#x575A;&#x6301;&#xFF0C;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4EF6;&#x5BB9;&#x6613;&#x7684;&#x4E8B;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<h2 class="mume-header" id="part-3-qr108c4b">Part 3 qr108c4b</h2>
+
+<h3 class="mume-header" id="question-10906">Question 10906</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align: justify">&#xA0; Technology experts, government officials, policy makers and engineers are meeting this week in Italy. They have gathered in Rome for the first Green Standards Week conference.<br>&#xA0; Italy&apos;s Ministry of Economic Development and the International Telecommunications Union organized the conference. The event calls attention to the need for information and communication technologies to fight climate change and to build greener, more environmentally-friendly economies.<br>&#xA0; In recent years, the world has changed because so many people now use computers, mobile phones and other kinds of electronic devices. But the increasing use of information and communication technologies also has led to more pollution, especially&#xA0;carbon dioxide&#xA0;emissions. This is mostly because of the energy used to manufacture, transport and operate such equipment. Still, many experts say these technologies offer the best chance for reducing greenhouse gases.<br>&#xA0;&#xA0; <br>&#xA0; The Global Information Society reported last year that information and communication technologies could help to cut total production of greenhouse gases by as much as 15 percent by 2020.&#xA0;<br>&#xA0;&#xA0;&#xA0;<br>&#xA0; Alan Finlay, an expert in economy, says the effect of using information and communication technologies to build cleaner environments is far more powerful than their harmful effects.<br>&#xA0; <br>&#xA0; He says when people are looking at greening with information technologies, they are looking at the impact of these technologies on the environment but also what these can be used in order to improve the impact of other industries on the environment. And these technologies can do more good in a sort of bigger context.<span style="font-family: &#x5B8B;&#x4F53;; font-size: 12pt; mso-bidi-font-family: &#x5B8B;&#x4F53;; mso-font-kerning: 0pt" lang="EN-US"></span></div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018171330852.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10906.mp3<p></p>
+<p>Question&#xFF1A;What is the main purpose of the conference?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018171340410.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10906.mp3<br>
+A : To boost economy in Italy by using telecommunications.<br>
+<em><strong>B : To use information and communication technologies to fight against environmental problems.</strong></em><br>
+C : To find some solutions to deal with the rapid climate changes.<br>
+D : To create more environmentally-friendly economies.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x5F00;&#x7BC7;&#x63D0;&#x5230;&#xFF0C;&#x6B64;&#x6B21;&#x6280;&#x672F;&#x4E13;&#x5BB6;&#x3001;&#x653F;&#x5E9C;&#x5B98;&#x5458;&#x548C;&#x4E00;&#x4E9B;&#x5DE5;&#x7A0B;&#x5E08;&#x5728;&#x610F;&#x5927;&#x5229;&#x7F57;&#x9A6C;&#x53C2;&#x52A0;&#x4F1A;&#x8BAE;&#x3002;&#x4F1A;&#x8BAE;&#x7684;&#x8BAE;&#x9898;&#x4FBF;&#x662F;&#x8FD0;&#x7528;&#x4FE1;&#x606F;&#x548C;&#x901A;&#x4FE1;&#x6280;&#x672F;&#x6765;&#x5BF9;&#x6297;&#x6C14;&#x5019;&#x53D8;&#x5316;&#xFF0C;&#x4EE5;&#x5EFA;&#x8BBE;&#x66F4;&#x52A0;&#x7EFF;&#x8272;&#x7684;&#x793E;&#x4F1A;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;Why did the use of information and communication technologies lead to more pollution in the eyes of some experts?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018171358426.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10906.mp3<br>
+A : Because information and communication technologies cause other industries to do harm to the environment.<br>
+<em><strong>B : Because the energy used on them produces more greenhouse gases.</strong></em><br>
+C : Because some electronic devices like computer, mobile phones emit harmful radiations.<br>
+D : Because some engineers in Rome use polluted materials to manufacture the electronic devices.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x4FE1;&#x606F;&#x548C;&#x901A;&#x4FE1;&#x6280;&#x672F;&#x7ED9;&#x73AF;&#x5883;&#x5E26;&#x6765;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x6C61;&#x67D3;&#x3002;&#x539F;&#x56E0;&#x5219;&#x5728;&#x4E8E;&#x7528;&#x6765;&#x751F;&#x4EA7;&#x3001;&#x8FD0;&#x8F93;&#x548C;&#x64CD;&#x4F5C;&#x8FD9;&#x79CD;&#x8BBE;&#x5907;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x80FD;&#x6E90;&#x4F1A;&#x52A0;&#x5267;&#x6E29;&#x5BA4;&#x6C14;&#x4F53;&#x7684;&#x6392;&#x653E;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;What is Alan Finlay&apos;s opinion towards information and communication technologies?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/resourcefile/201310/710/20131018171408101.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/10906.mp3<br>
+<em><strong>A : He thinks that information and communication technologies have more merits than demerits on the issue of greenhouse effect.</strong></em><br>
+B : He suggests that the conference should consider information and communication technologies as a whole and do not evaluate from a certain angle.<br>
+C : He thinks that the information and communication technologies indeed bring more harm to the environment.<br>
+D : He agrees that all the bad should be eliminated just like throwing the bath water.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;Alan Finlay&#x5BF9;&#x4E8E;&#x6B64;&#x4E8B;&#x7684;&#x770B;&#x6CD5;&#xFF1A;&#x4FE1;&#x606F;&#x548C;&#x901A;&#x4FE1;&#x6280;&#x672F;&#x5728;&#x5B8F;&#x89C2;&#x7684;&#x6761;&#x4EF6;&#x4E0B;&#x4EA7;&#x751F;&#x7684;&#x76CA;&#x5904;&#x66F4;&#x5927;&#xFF08;these technologies can do more good in a sort of macro context&#xFF09;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4ED6;&#x662F;&#x8D5E;&#x6210;&#x4FE1;&#x606F;&#x548C;&#x901A;&#x4FE1;&#x6280;&#x672F;&#x7684;&#x4F18;&#x70B9;&#x5927;&#x4E8E;&#x7F3A;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x9009;C&#x3002;</p>
+<h3 class="mume-header" id="question-19154944">Question 19154944</h3>
+
+<p>&#x5168;&#x6587;&#x8D44;&#x6E90;&#xFF1A;</p><div style="text-align: justify;">Have you ever had someone try to explain something to you a dozen times with no luck, but then when you see a picture, the idea finally clicks? If that sounds familiar, maybe you might consider yourself a visual learner. Or, if reading or listening does the trick, maybe you feel like you&#x2019;re a verbal learner. We call these labels learning styles. But is there really a way to categorize different types of students? Well, it actually seems that multiple presentation formats, especially if one of them is visual, help most people learn.<br><br>
+&#xA0;<br><br>
+When psychologists and educators test for learning styles, they&#x2019;re trying to figure out whether these are inherent traits that affect how well students learn instead of just a preference. Usually, they start by giving a survey to figure out what style a student favors, like visual or verbal learning. Then, they try to teach the students something with a specific presentation style, like using visual aids, and do a follow-up test to see how much they learned. That way, the researchers can see if the self-identified verbal learners really learned better when the information was just spoken aloud, for example.<br><br>
+&#xA0;<br><br>
+But, according to a 2008 review, only one study that followed this design found that students actually learned best with their preferred style. But the study had some big flaws. The researchers excluded two-thirds of the original participants, because they didn&#x2019;t seem to have any clear learning style from the survey at the beginning, and they didn&#x2019;t even report the actual test scores in the final paper. So&#x2026; it doesn&#x2019;t really seem like learning styles are an inherent trait that we all have. But, that doesn&#x2019;t mean that all students will do amazingly if they just spend all their time reading from a textbook.<br><br>
+&#xA0;<br><br>
+Instead, most people seem to learn better if they&#x2019;re taught in several ways&#x2014;especially if one is visual. In one study, researchers tested whether students remembered lists of words better if they heard them, saw them, or both. And everyone seemed to do better if they got to see the words in print, even the self-identified auditory learners. Their preference didn&#x2019;t seem to matter. Similar studies tested whether students learned basic physics and chemistry concepts better by reading plain text or viewing pictures too. And everyone did better with the help of pictures.</div><br>
+&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103926/sfhnle_27153059388.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154944.mp3<p></p>
+<p>Question&#xFF1A;Why do psychologists and educators study learning styles?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103926/xyjrgb_27153059391.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154944.mp3<br>
+<em><strong>A : To see if they are inherent traits affecting learning.</strong></em><br>
+B : To understand the mechanism of the human brain.<br>
+C : To categorize different types of learners.<br>
+D : To find out what students prefer to learn.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x5FC3;&#x7406;&#x5B66;&#x5BB6;&#x548C;&#x6559;&#x80B2;&#x5DE5;&#x4F5C;&#x8005;&#x505A;&#x5B66;&#x4E60;&#x98CE;&#x683C;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x5F04;&#x6E05;&#x695A;&#x5B66;&#x4E60;&#x98CE;&#x683C;&#x662F;&#x5F71;&#x54CD;&#x5B66;&#x751F;&#x5B66;&#x4E60;&#x8D28;&#x91CF;&#x7684;&#x5185;&#x5728;&#x7279;&#x8D28;&#xFF0C;&#x8FD8;&#x662F;&#x53EA;&#x662F;&#x4E00;&#x79CD;&#x5B66;&#x4E60;&#x504F;&#x597D;&#xFF0C;&#x6240;&#x4EE5;&#x9009;D&#x3002;</p>
+<p>Question&#xFF1A;What does the speaker say about one study mentioned in the 2008 review?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103926/rtvycu_27153059391.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154944.mp3<br>
+A : It was misguided.<br>
+B : It was thought-provoking.<br>
+C : It was original in design.<br>
+<em><strong>D : It was defective.</strong></em><br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x6839;&#x636E;2008&#x5E74;&#x7684;&#x4E00;&#x7BC7;&#x8BC4;&#x8BBA;&#xFF0C;&#x53EA;&#x6709;&#x9075;&#x5FAA;&#x8BE5;&#x8BBE;&#x8BA1;&#x7684;&#x4E00;&#x9879;&#x7814;&#x7A76;&#x8868;&#x660E;&#xFF0C;&#x5B66;&#x751F;&#x559C;&#x6B22;&#x7684;&#x5B66;&#x4E60;&#x65B9;&#x5F0F;&#x7684;&#x786E;&#x4F1A;&#x4EA7;&#x751F;&#x6700;&#x597D;&#x7684;&#x5B66;&#x4E60;&#x6548;&#x679C;&#xFF0C;&#x4F46;&#x8FD9;&#x9879;&#x7814;&#x7A76;&#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x5927;&#x7684;&#x7F3A;&#x9677;&#xFF0C;&#x6240;&#x4EE5;&#x9009;A&#x3002;</p>
+<p>Question&#xFF1A;What message does the speaker want to convey about learning at the end of the talk?<br>
+&#x97F3;&#x9891;&#xFF1A;<audio id="audio" controls preload="none"><source id="mp3" src="https://itestres.unipus.cn/itest-product/quesres/hearmp3/b_1097/paper/202004/p_10103926/xanwlp_27153059392.mp3"></audio><br>
+&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;Unit5/19154944.mp3<br>
+<em><strong>A : Visual aids are helpful to all types of learners.</strong></em><br>
+B : Auditory aids are as important as visual aids.<br>
+C : Scientific concepts are hard to understand without visual aids.<br>
+D : Reading plain texts is more effective than viewing pictures.<br>
+&#x89E3;&#x6790;&#xFF1A;&#x7EC6;&#x8282;&#x9898;&#x3002;&#x97F3;&#x9891;&#x7ED3;&#x5C3E;&#x63D0;&#x5230;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x591A;&#x79CD;&#x5B66;&#x4E60;&#x65B9;&#x5F0F;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x4EBA;&#x4F3C;&#x4E4E;&#x90FD;&#x80FD;&#x591F;&#x53D6;&#x5F97;&#x66F4;&#x597D;&#x7684;&#x5B66;&#x4E60;&#x6548;&#x679C;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x89C6;&#x89C9;&#x5B66;&#x4E60;&#x65B9;&#x5F0F;&#x3002;&#x5728;&#x4E00;&#x9879;&#x7814;&#x7A76;&#x4E2D;&#xFF0C;&#x7814;&#x7A76;&#x4EBA;&#x5458;&#x8BA9;&#x5B66;&#x751F;&#x542C;&#x5355;&#x8BCD;&#x8868;&#x3001;&#x770B;&#x5355;&#x8BCD;&#x8868;&#x6216;&#x65E2;&#x542C;&#x53C8;&#x770B;&#x5355;&#x8BCD;&#x8868;&#xFF0C;&#x770B;&#x4ED6;&#x4EEC;&#x80FD;&#x5426;&#x66F4;&#x597D;&#x5730;&#x8BB0;&#x4F4F;&#x8FD9;&#x4E9B;&#x5355;&#x8BCD;&#x3002;&#x7ED3;&#x679C;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x80FD;&#x770B;&#x5230;&#x7EB8;&#x8D28;&#x7248;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x51E0;&#x4E4E;&#x6BCF;&#x4E2A;&#x5B66;&#x751F;&#x90FD;&#x80FD;&#x8BB0;&#x5FC6;&#x5F97;&#x66F4;&#x597D;&#xFF0C;&#x751A;&#x81F3;&#x5305;&#x62EC;&#x90A3;&#x4E9B;&#x81EA;&#x8BA4;&#x4E3A;&#x662F;&#x542C;&#x89C9;&#x5B66;&#x4E60;&#x8005;&#x7684;&#x4EBA;&#x3002;&#x4E00;&#x4E9B;&#x7C7B;&#x4F3C;&#x7684;&#x7814;&#x7A76;&#x6D4B;&#x8BD5;&#x4E86;&#x9605;&#x8BFB;&#x7EAF;&#x6587;&#x672C;&#x6216;&#x770B;&#x56FE;&#x7247;&#x662F;&#x5426;&#x80FD;&#x5E2E;&#x52A9;&#x5B66;&#x751F;&#x66F4;&#x597D;&#x5730;&#x5B66;&#x4E60;&#x57FA;&#x672C;&#x7684;&#x7269;&#x7406;&#x548C;&#x5316;&#x5B66;&#x6982;&#x5FF5;&#xFF0C;&#x5728;&#x8FD9;&#x4E9B;&#x7814;&#x7A76;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x80FD;&#x901A;&#x8FC7;&#x770B;&#x56FE;&#x7247;&#x5B66;&#x5F97;&#x66F4;&#x597D;&#x3002;&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x8BB2;&#x8BDD;&#x8005;&#x60F3;&#x8868;&#x8FBE;&#x7684;&#x662F;&#xFF0C;&#x89C6;&#x89C9;&#x5B66;&#x4E60;&#x5BF9;&#x5404;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5B66;&#x4E60;&#x8005;&#x90FD;&#x6709;&#x5229;&#xFF0C;&#x6240;&#x4EE5;&#x9009;B&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
